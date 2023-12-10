@@ -1,19 +1,21 @@
 import { Button } from "@/components/ui/button"
+import logo from "../../assets/logo.jpg"
 
 export default function Header() {
   return (
     <div className="relative bg-black text-white">
-      <nav className="flex justify-between items-center px-6 py-4">
+      <nav className="flex justify-between items-center px-6 py-4 space-x-10">
         <div className="flex items-center space-x-4">
           <img
             alt="Logo"
             height="40"
-            src="/placeholder.svg"
+            src={logo}
             style={{
               aspectRatio: "100/40",
               objectFit: "cover",
             }}
             width="100"
+            className="rounded-full"
           />
           <ul className="hidden md:flex space-x-6">
             <li>

@@ -1,10 +1,12 @@
-import { Button } from "./components/ui/button"
+import Footer from "./components/screens/Footer"
+import Header from "./components/screens/Header"
 
 
 const App = () => {
   return (
     <div>
-      <Button>ADDULA</Button>
+      <Header/>
+      <Footer/>
     </div>
   )
 }

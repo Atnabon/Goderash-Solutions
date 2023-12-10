@@ -73,6 +73,7 @@ export default function Footer() {
 
 
 
+{/* icon*/}
 
 function FacebookIcon(props) {
   return (

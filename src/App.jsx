@@ -1,12 +1,12 @@
-import Homepage from "./components/Homepage/Homepage"
-
+import Homepage from "./components/Homepage/Homepage";
 
 const App = () => {
   return (
     <div>
-      <Homepage/>
+      <Homepage />
+      {/* <TestPage /> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

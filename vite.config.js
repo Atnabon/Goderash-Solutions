@@ -1,9 +1,12 @@
 import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+// vite.config.js or vite.config.ts
+
+import ReactRefreshPlugin from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [ReactRefreshPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

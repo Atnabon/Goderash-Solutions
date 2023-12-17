@@ -5,17 +5,13 @@ import Sidebar from "./Side";
 
 const Home = () => {
   return (
-    <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
+    <div className="flex h-screen bg-white mt-20">
       <Sidebar />
-
-      {/* Main Content */}
-      <main className="flex-1  overflow-x-hidden overflow-y-auto bg-gray-200">
-        {/* Navbar */}
+      <main className="flex-1 bg-white">
         <Navbar />
 
         {/* Page Content */}
-        <div className="p-6">
+        <div className=" p-14">
           {/* Add your page content here */}
           <h1 className="text-3xl font-semibold mb-4">
             Welcome to the Admin Dashboard

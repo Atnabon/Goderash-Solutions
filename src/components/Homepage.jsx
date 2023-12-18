@@ -6,6 +6,7 @@ const Homepage = () => {
     <div>
       <Header />
       <HowTo />
+      {/* <Footer /> */}
     </div>
   );
 };

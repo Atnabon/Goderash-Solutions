@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col">
-      <div className="bg-[#1a1a1a] text-white p-6">
+    <div className="flex flex-col ">
+      <div className=" bg-stone-950 text-white shadow-2xl border-t-1 border-white p-6">
         <div className="grid grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">Goderash</h3>
@@ -21,6 +20,7 @@ export default function Footer() {
               <li>Marketplace</li>
             </ul>
           </div>
+
           <div>
             <h3 className="font-bold text-lg mb-4">Ethical Business</h3>
             <ul className="space-y-2">
@@ -41,15 +41,22 @@ export default function Footer() {
               <span>994</span>
             </div>
             <div className="mb-4">
-              <h3 className="font-bold text-lg">Be the first to hear our news</h3>
+              <h3 className="font-bold text-lg">
+                Be the first to hear our news
+              </h3>
               <div className="flex mt-2">
-                <input className="p-2 mr-2 flex-1" placeholder="Email address" type="email" />
+                <input
+                  className="p-2 mr-2 flex-1"
+                  placeholder="Email address"
+                  type="email"
+                />
                 <Button>Sign up</Button>
               </div>
             </div>
           </div>
+          {/* <div className="absolute z-[0] w-[100%] h-[100%] mt-72 rounded-full blue__gradient bottom-40" /> */}
         </div>
-        <div className="flex justify-between items-center mt-6 border-t border-gray-700 pt-4">
+        <div className="flex justify-between items-center mt-6  border-t-2 border-white pt-4">
           <span>© 2023 Goderash. All Rights Reserved</span>
           <div className="flex space-x-4">
             <a className="block" href="#">
@@ -68,12 +75,12 @@ export default function Footer() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-
-
-{/* icon*/}
+{
+  /* icon*/
+}
 
 function FacebookIcon(props) {
   return (
@@ -91,9 +98,8 @@ function FacebookIcon(props) {
     >
       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
     </svg>
-  )
+  );
 }
-
 
 function HelpCircleIcon(props) {
   return (
@@ -113,9 +119,8 @@ function HelpCircleIcon(props) {
       <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
       <path d="M12 17h.01" />
     </svg>
-  )
+  );
 }
-
 
 function InstagramIcon(props) {
   return (
@@ -135,9 +140,8 @@ function InstagramIcon(props) {
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
-  )
+  );
 }
-
 
 function LinkedinIcon(props) {
   return (
@@ -157,9 +161,8 @@ function LinkedinIcon(props) {
       <rect width="4" height="12" x="2" y="9" />
       <circle cx="4" cy="4" r="2" />
     </svg>
-  )
+  );
 }
-
 
 function PhoneIcon(props) {
   return (
@@ -177,9 +180,8 @@ function PhoneIcon(props) {
     >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
     </svg>
-  )
+  );
 }
-
 
 function TwitterIcon(props) {
   return (
@@ -197,7 +199,5 @@ function TwitterIcon(props) {
     >
       <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
     </svg>
-  )
+  );
 }
-
-

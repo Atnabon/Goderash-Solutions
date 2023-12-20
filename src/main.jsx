@@ -18,9 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/admin" element={<Home />} />
         <Route path="/homepage" element={<Homepage />} />
-        <Route path="/howTo" element={<HowTo />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/amen" element={<HomePage />} />
       </Routes>
       <Footer />
     </AuthProvider>

@@ -1,27 +1,41 @@
 import { Button } from "@/components/ui/button";
 import bgimg from "../assets/bgo.jpg";
+import b from "../assets/b.png";
+import logo_icon from "../assets/image/logo/logo-icon.svg";
+import styles from "../style";
+import { arrowUp } from "../assets";
 
 export default function Component() {
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-slate-950 overflow-hidden">
       <div className="absolute inset-0">
         <img
           alt="Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-pulse"
           height="2048"
-          src={bgimg}
+          src={b}
           style={{
             aspectRatio: "581/2048",
             objectFit: "cover",
           }}
           width="581"
         />
-        <div className="absolute inset-0 bg-black opacity-25" />
+        <div className="absolute inset-0 bg-black opacity-5" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-between min-h-screen px-4 py-8">
         {/* header*/}
         <header className="w-full flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-white">GODERASH</h1>
+          <h1 className="text-3xl font-bold text-gradient  ml-3">GODERASH</h1>
+          {/* <img
+            alt="Logo"
+            className=" rounded-full w-20 h-20 mb-10 object-cover ml-8"
+            src={logo_icon}
+            style={{
+              aspectRatio: "100/2048",
+              objectFit: "cover",
+            }}
+          /> */}
+
           <nav className="flex justify-between items-center px-6 py-4 space-x-10">
             <div className="flex items-center space-x-4">
               <ul className="hidden md:flex space-x-6">
@@ -53,7 +67,7 @@ export default function Component() {
               </ul>
             </div>
             <div className="flex items-center space-x-4">
-              <Button className="bg-[#ffcc00] text-black hover:bg-white flex items-center px-4 py-2 rounded-md">
+              <Button className="bg-secondary text-black shadow-2xl hover:shadow-white hover:bg-white flex items-center px-4 py-2  rounded-md">
                 <span className="mr-2">Download Now</span>
                 <AppleIcon className="text-black mr-1" />
                 <SmartphoneIcon className="text-black" />
@@ -66,17 +80,44 @@ export default function Component() {
         </header>
 
         {/*main*/}
-        <main className="flex flex-col items-center text-center mb-44">
+        <main className="flex mt-32 flex-col items-center text-center mb-10 pt-4">
           <h2 className="text-6xl font-bold text-white mb-4">
             We give you the time to do the things that matter
           </h2>
           <p className="text-xl text-white mb-8">
             Fuel delivery and time-saving vehicle services
           </p>
-          <Button className="bg-yellow-400 text-black hover:bg-white">
-            Lets GODERASH
-          </Button>
+          <div
+            className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer `}
+          >
+            <div
+              className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
+            >
+              <div className={`${styles.flexStart} flex-row `}>
+                <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
+                  <span className="text-gradient">Get</span>
+                </p>
+                <img
+                  src={arrowUp}
+                  alt="arrow-up"
+                  className="w-[23px] h-[23px] object-contain"
+                />
+              </div>
+
+              <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
+                <span className="text-gradient">Goderash</span>
+              </p>
+            </div>
+          </div>
         </main>
+
+        {/* gradient start */}
+        <div className=" rounded-full  ">
+          <div className="flex overflow-hidden justify-between py-2">
+            <div className="absolute z-[99] w-[10%] overflow-hidden ml-72  h-[70%] top-0 blue__gradient " />
+          </div>
+          <div className="absolute rounded-full mt-24 ml-44 overflow-hidden  z-[10] w-[10%] h-[20%] right-20 bottom-20 blue__gradient" />
+        </div>
       </div>
     </div>
   );

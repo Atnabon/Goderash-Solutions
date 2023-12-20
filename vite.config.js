@@ -15,4 +15,5 @@ export default defineConfig({
   server: {
     port: 3000, // Change the port to 3001 or any other desired port
   },
+  assetsInclude: /\.(png|jpe?g|gif|svg)$/i,
 });

@@ -7,7 +7,12 @@ import {
   shield,
   star,
   a,
+  fuel,
+  logo1,
+  splah,
 } from "../assets";
+import { GiCarWheel } from "react-icons/gi";
+import { MdElectricCar } from "react-icons/md";
 
 export const features = [
   {
@@ -145,5 +150,78 @@ export const socialMedia = [
     id: "social-media-4",
     icon: linkedin,
     link: "https://www.linkedin.com/",
+  },
+];
+
+export const services = [
+  {
+    id: "services_1",
+    content:
+      "Money is only a tool. It will take you wherever you wish, but it will .",
+    name: "Fuel...!",
+    title: "Money is only a tool. It will take you wherever you wish, but it.",
+    img: fuel,
+  },
+  {
+    id: "services_2",
+    content:
+      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+    name: "Tyre...!",
+    title: "Money is only a tool. It will take you wherever you wish, .",
+    img: logo1,
+  },
+  {
+    id: "services_3",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "Trye...!",
+    title:
+      "Money is only a tool. It will take you wherever you wish, but it will.",
+    img: splah,
+  },
+
+  {
+    id: "services_4",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "Trye...!",
+    title:
+      "Money is only a tool. It will take you wherever you wish, but it will.",
+    img: splah,
+  },
+  {
+    id: "services_5",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "Car Wah...!",
+    title:
+      "Money is only a tool. It will take you wherever you wish, but it will not .",
+    img: logo1,
+  },
+  {
+    id: "services_6",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "Insurances...!",
+    title: "Money is only a tool. It will take you wherever you wish, .",
+    img: fuel,
+  },
+  {
+    id: "services_7",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "Fuel ...!",
+    title:
+      "Money is only a tool. It will take you wherever you wish, but it will not",
+    img: logo1,
+  },
+  {
+    id: "services_8",
+    content:
+      "It is usually people in the money business, finance, and eally rich.",
+    name: "car Wash...!",
+    title:
+      "Money is only a tool. It will take you wherever you wish, but it will not ",
+    img: fuel,
   },
 ];

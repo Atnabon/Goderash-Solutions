@@ -1,5 +1,4 @@
 import styles from "../style";
-
 export default function HowTo() {
   return (
     <div className="flex justify-center items-center py-16   ">

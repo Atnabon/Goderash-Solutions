@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <div className="flex flex-col ">
-      <div className=" bg-stone-950 text-white shadow-2xl border-t-1 border-white p-6">
+      <div className=" bg-teal-200 text-black shadow-2xl border-t-1 border-green-500 p-6">
         <div className="grid grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">Goderash</h3>

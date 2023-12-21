@@ -1,7 +1,9 @@
 import a from "./a.JPG";
 import b from "./b.png";
+import splah from "./splah.png";
 
-import logo from "./logo.svg";
+import fuel from "./fuel.jpg";
+import logo1 from "./logo1.png";
 import quotes from "./quotes.svg";
 import send from "./Send.svg";
 import shield from "./Shield.svg";
@@ -19,8 +21,10 @@ import twitter from "./twitter.svg";
 
 export {
   b,
+  splah,
   a,
-  logo,
+  fuel,
+  logo1,
   quotes,
   send,
   shield,

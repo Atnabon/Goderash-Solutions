@@ -3,9 +3,9 @@ import styles from "./Services.module.css"; // Import the CSS file for styling
 
 const Services = ({ content, name, title, img }) => (
   <div
-    className={` relative fized inset-0 bg-black   w-full h-full flex flex-col items-center justify-center text-white font-semibold py-4 px-6 rounded-[20px] transition-opacity duration-300 opacity-1 hover:opacity-100`}
+    className={` relative fized inset-0 bg-black  w-full h-full flex flex-wrap items-center justify-center text-white font-semibold py-4 px-6 rounded-[20px] transition-opacity duration-300 opacity-1 hover:opacity-100`}
   >
-    <div className="flex md:flex-wrap items-center justify-center flex-wrap ">
+    <div className="flex md:flex-row items-center justify-center flex-wrap ">
       <img
         src={img}
         alt={name}
@@ -21,7 +21,7 @@ const Services = ({ content, name, title, img }) => (
           </h4>
         </div>
         <div
-          className={`absolute inset-0 hover:space-y-10  hover:border-1 hover:shadow-md hover:shadow-white bg-black bg-opacity-100 w-full h-full flex flex-col items-center   justify-center text-white font-semibold   py-4 px-6 rounded-[20px] transition-opacity duration-800 opacity-0 hover:opacity-100`}
+          className={`absolute inset-0 hover:space-y-10 sm:block hidden  hover:border-1 hover:shadow-md hover:shadow-white bg-black bg-opacity-100 w-full h-full  items-center   justify-center text-white font-semibold   py-4 px-6 rounded-[20px] transition-opacity duration-800 opacity-0 hover:opacity-100`}
         >
           <img
             src={img}

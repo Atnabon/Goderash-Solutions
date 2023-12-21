@@ -1,6 +1,8 @@
 import a from "./a.JPG";
 import b from "./b.png";
 import splah from "./splah.png";
+import arrowL from "./arrowL.svg";
+import arrowR from "./arrowR.svg";
 
 import fuel from "./fuel.jpg";
 import logo1 from "./logo1.png";
@@ -20,6 +22,8 @@ import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
 
 export {
+  arrowL,
+  arrowR,
   b,
   splah,
   a,

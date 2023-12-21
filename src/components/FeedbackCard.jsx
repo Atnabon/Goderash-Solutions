@@ -1,23 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { quotes } from "../assets";
 
 const FeedbackCard = ({ content, name, title, img }) => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    className="flex flex-wrap px-10 py-12 rounded-[20px]  md:mr-10 sm:mr-5 mr-0 my-5 feedback-card border"
-  >
-    <img
-      src={quotes}
-      alt="double_quotes"
-      className="w-[42.6px] h-[27.6px] object-contain"
-    />
-    <p className="font-poppins font-normal text-[18px] leading-[32.4px] text-white my-10">
-      {content}
-    </p>
-
+  <div className="flex flex-col px-10 py-12 rounded-[30px] gap-4 w-[80%]  md:mr-10 sm:mr-5 mr-0 my-5 feedback-card border">
     <div className="flex flex-col md:flex-row items-center">
       <img
         src={img}
@@ -33,7 +18,22 @@ const FeedbackCard = ({ content, name, title, img }) => (
         </p>
       </div>
     </div>
-  </motion.div>
+    <div>
+      <img
+        src={quotes}
+        alt="double_quotes"
+        className="w-[20px] h-[10.6px]  object-contain"
+      />
+      <p className="font-poppins font-normal text-[18px] leading-[32.4px] text-white ">
+        {content}
+      </p>
+      <img
+        src={quotes}
+        alt="double_quotes"
+        className="w-[20px] h-[10.6px]  object-contain"
+      />
+    </div>
+  </div>
 );
 
 export default FeedbackCard;

@@ -1,46 +1,37 @@
 // src/components/Testimonials.jsx
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import FeedbackCard from "./FeedbackCard";
 import { feedback } from "../constants";
 import styles from "../style";
 import { star } from "@/assets";
+import { arrowR } from "@/assets";
+import { arrowL } from "@/assets";
 
 const Testimonials = () => {
-  const loopDuration = 5; // Adjust the loop duration as needed
-  const itemsPerPage = 3;
-
+  const itemsPerPage = 1; // Number of items to show per page
+  const totalItems = feedback.length;
   const [currentPage, setCurrentPage] = useState(0);
 
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
   const handleNextPage = () => {
-    setCurrentPage(
-      (prevPage) => (prevPage + 1) % Math.ceil(feedback.length / itemsPerPage)
-    );
+    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
   };
 
   const handlePrevPage = () => {
-    setCurrentPage(
-      (prevPage) =>
-        (prevPage - 1 + Math.ceil(feedback.length / itemsPerPage)) %
-        Math.ceil(feedback.length / itemsPerPage)
-    );
+    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      handleNextPage();
-    }, loopDuration * 1000);
-
-    return () => clearInterval(intervalId);
-  }, [currentPage]);
-
+  const visibleFeedback = feedback.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage
+  );
   return (
     <section
       id="clients"
-      className={`${styles.paddingY} ${styles.flexCenter} flex-col relative border-t-1 py-2  border-white `}
+      className={`${styles.paddingY} ${styles.flexCenter} flex-col relative  py-2  border-white `}
     >
-      <div className="absolute z-[0] w-[100%] h-[100%] rounded-full blue__gradient bottom-40" />
-
       <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
         <h2 className={styles.heading2}>
           What People are <br className="sm:block hidden" /> saying about us
@@ -57,28 +48,31 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="flex flex-nowrap overflow-hidden relative z-[1]">
-        <AnimatePresence initial={false}>
-          <motion.div
-            key={currentPage}
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "-100%" }}
-            transition={{ duration: loopDuration, ease: "easeInOut" }}
-          >
-            <div className="flex flex-nowrap ">
-              {feedback
-                .slice(
-                  currentPage * itemsPerPage,
-                  (currentPage + 1) * itemsPerPage
-                )
-                .map((card) => (
-                  <FeedbackCard key={card.id} {...card} />
-                ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+      <div className="flex flex-col items-center">
+        {visibleFeedback.map((card) => (
+          <FeedbackCard key={card.id} {...card} />
+        ))}
+        {totalPages > 1 && (
+          <div className="flex mt-4">
+            {currentPage > 0 && (
+              <img
+                src={arrowL}
+                alt="arrowl"
+                onClick={handlePrevPage}
+                className="mr-2 bg-white animate-bounce"
+              />
+            )}
+            Prev
+            <img
+              src={arrowR}
+              alt="arrowr"
+              onClick={handleNextPage}
+              className="mr-2 bg-white animate-bounce accent-lime-50"
+            />
+          </div>
+        )}
       </div>
+      <div className="absolute z-[0] w-[10%] h-[10%] rounded-full blue__gradient bottom-40" />
     </section>
   );
 };

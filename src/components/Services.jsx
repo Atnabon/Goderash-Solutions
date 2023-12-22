@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Services.module.css"; // Import the CSS file for styling
+import styles from "./Services.module.css";
 
 const Services = ({ content, name, title, img }) => (
   <div

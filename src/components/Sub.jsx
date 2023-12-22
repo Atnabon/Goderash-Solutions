@@ -1,5 +1,3 @@
-// src/App.js
-
 import React from "react";
 import {
   CardTitle,
@@ -13,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 function Sub() {
   return (
-    <div className="`bg-[#011730] text-white p-8 ">
+    <div className="bg-[#011730] text-white   ">
       <h2 className="text-center text-4xl font-bold mb-6">
         Subscriptions For More
       </h2>
@@ -21,7 +19,7 @@ function Sub() {
         Choose the right pricing for you and get started working on your project
       </p>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4">
-        <Card className="w-full md:w-[350px] mt-3 bg-indigo-900 hover:shadow-md hover:bg-current hover:border-rose-50 hover:border-x-green-900 hover:-shadow-xl hover:border-y-sky-600">
+        <Card className="w-full md:w-[350px] mt-3 bg-[#011730] hover:shadow-md hover:bg-current hover:border-rose-50 hover:border-x-green-900 hover:-shadow-xl hover:border-y-sky-600">
           <CardHeader>
             <CardTitle className="text-white">Pro...! </CardTitle>
             <CardDescription className="text-xl text-white font-bold">
@@ -45,7 +43,7 @@ function Sub() {
             </Button>
           </CardFooter>
         </Card>
-        <Card className="w-full md:w-[350px] bg-yellow-600 hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">
+        <Card className="w-full md:w-[350px] bg-[#011730] hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">
           <CardHeader>
             <CardTitle className="text-white">Pro...!</CardTitle>
             <CardDescription className="text-xl font-bold text-white">
@@ -70,7 +68,7 @@ function Sub() {
             </Button>
           </CardFooter>
         </Card>
-        <Card className=" w-full md:w-[350px] bg-[#6a1541] hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
+        <Card className=" w-full md:w-[350px] bg-[#011730] hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
           <CardHeader>
             <CardTitle className="text-white">Pro...!</CardTitle>
             <CardDescription className="text-xl text-white font-bold">
@@ -89,7 +87,7 @@ function Sub() {
             </ul>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <Button className="bg-secondary text-black shadow-2xl hover:shadow-white hover:animate-bounce hover:bg-white flex items-center px-4 py-2  rounded-md">
+            <Button className="bg-secondary text-black shadow-2xl hover:shadow-white hover:animate-bounce hover:bg-white flex items-center px-4 py-2 rounded-md">
               <span className="mr-2">Start pro Trial</span>
             </Button>
           </CardFooter>

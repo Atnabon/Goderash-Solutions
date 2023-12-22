@@ -71,7 +71,7 @@ const Testimonials = () => {
           </div>
         )}
       </div>
-      {/* <div className="absolute z-[0] w-[10%] h-[10%] rounded-full blue__gradient bottom-40" /> */}
+      <div className="absolute z-[0] w-[10%] h-[10%] mt-96 rounded-full blue__gradient bottom-40" />
     </section>
   );
 };

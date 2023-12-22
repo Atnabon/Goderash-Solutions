@@ -53,10 +53,10 @@ const Register = () => {
   };
 
   return (
-    <section className="overflow-y-hidden bg-black">
+    <section className="overflow-y-hidden bg-[#011730]">
       <div className="grid-cols-3 h-screen w-full">
         <div className="bg-gray-800 relative flex w-full h-full mr-9 mt-3  flex-col justify-center ">
-          <form className="max-w-[400px] w-full  mx-auto rounded-lg  bg-gray-950 p-8 px-8">
+          <form className="max-w-[400px] w-full  mx-auto rounded-lg  bg-[#011730] p-8 px-8">
             <h2 className="text-3xl text-white font-bold text-center">
               Sign Up
             </h2>
@@ -143,9 +143,9 @@ const Register = () => {
           </form>
         </div>
         {/* gradient start */}
-        {/* <div className="absolute z-[999] duration-300 w-[20%] h-[10%]  pink__gradient" />
+        <div className="absolute z-[999] duration-300 w-[20%] h-[10%]  pink__gradient" />
         <div className="absolute z-[300] w-[10%] h-[10%] duration-300 rounded-full yellow__gradient bottom-40 " />
-        <div className="absolute z-[100] w-[10%] h-[10%]  duration-300  blue__gradient animate-pulse" /> */}
+        <div className="absolute z-[100] w-[10%] h-[10%]  duration-300  blue__gradient animate-pulse" />
         {/* gradient end */}
       </div>
     </section>

@@ -4,6 +4,7 @@ import b from "../assets/b.png";
 import logo_icon from "../assets/image/logo/logo-icon.svg";
 import styles from "../style";
 import { arrowUp } from "../assets";
+import { show } from "../assets";
 
 export default function Component() {
   return (
@@ -23,9 +24,9 @@ export default function Component() {
       </div>
       <div className="relative  flex flex-col items-center justify-between px-10">
         {/* header*/}
-        <header className=" w-screen top-1 flex bg-[#0064ff] justify-between items-center">
+        <header className=" w-screen fixed  flex bg-[#0064ff] justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-3xl ml-14 border space-x-2 border-y-2 shadow-lg">
+            <h1 className="text-3xl ml-14  space-x-2  shadow-lg">
               <span className=" text-white font-poppins ">GO</span>
               <span className=" text-white font-sans-serif">DERASH</span>
             </h1>
@@ -62,7 +63,7 @@ export default function Component() {
             <div
               className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
             >
-              <div className={`${styles.flexStart} flex-row `}>
+              {/* <div className={`${styles.flexStart} flex-row `}>
                 <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
                   <span className="text-gradient">Get</span>
                 </p>
@@ -71,10 +72,14 @@ export default function Component() {
                   alt="arrow-up"
                   className="w-[23px] h-[23px] object-contain"
                 />
-              </div>
+              </div> */}
 
               <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-                <span className="text-gradient">Goderash</span>
+                <img
+                  src={show}
+                  alt="arrow-up"
+                  className="w-[170px] h-[170px] mt-7 object-contain"
+                />
               </p>
             </div>
           </div>

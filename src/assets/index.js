@@ -21,8 +21,10 @@ import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
 import im from "./im.svg";
+import show from "./show.svg";
 
 export {
+  show,
   im,
   arrowL,
   arrowR,

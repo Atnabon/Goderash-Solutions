@@ -1,4 +1,3 @@
-// src/components/Testimonials.jsx
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import FeedbackCard from "./FeedbackCard";
@@ -72,7 +71,7 @@ const Testimonials = () => {
           </div>
         )}
       </div>
-      <div className="absolute z-[0] w-[10%] h-[10%] rounded-full blue__gradient bottom-40" />
+      {/* <div className="absolute z-[0] w-[10%] h-[10%] rounded-full blue__gradient bottom-40" /> */}
     </section>
   );
 };

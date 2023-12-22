@@ -5,16 +5,18 @@ import Business from "./Business";
 import styles from "@/style";
 import Products from "./products";
 import Sub from "./Sub";
+import Team from "./Team";
 
 const Homepage = () => {
   return (
     <div>
       <Header />
 
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`bg-[#011730] ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <HowTo />
           <Products />
+          <Team />
           <Sub />
           <Business />
           <Testimonials />

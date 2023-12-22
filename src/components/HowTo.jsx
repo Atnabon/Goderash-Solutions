@@ -1,7 +1,7 @@
 import styles from "../style";
 export default function HowTo() {
   return (
-    <div className="flex justify-center items-center py-16   ">
+    <div className="flex justify-center items-center py-16 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-center  text-gradient  mb-16">
           It’s As Easy As 1- 2 - GODERASH{" "}

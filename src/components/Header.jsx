@@ -20,55 +20,24 @@ export default function Component() {
           }}
           width="581"
         />
-        <div className="absolute inset-0 bg-black opacity-5" />
       </div>
-      <div className="relative z-10 flex flex-col items-center justify-between min-h-screen px-4 py-8">
+      <div className="relative  flex flex-col items-center justify-between px-10">
         {/* header*/}
-        <header className="w-full flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gradient  ml-3">GODERASH</h1>
-          {/* <img
-            alt="Logo"
-            className=" rounded-full w-20 h-20 mb-10 object-cover ml-8"
-            src={logo_icon}
-            style={{
-              aspectRatio: "100/2048",
-              objectFit: "cover",
-            }}
-          /> */}
+        <header className=" w-screen top-1 flex bg-[#0064ff] justify-between items-center">
+          <div className="flex items-center">
+            <h1 className="text-3xl ml-14 border space-x-2 border-y-2 shadow-lg">
+              <span className=" text-white font-poppins ">GO</span>
+              <span className=" text-white font-sans-serif">DERASH</span>
+            </h1>
+          </div>
 
-          <nav className="flex justify-between items-center px-6 py-4 space-x-10">
+          <nav className="flex justify-between items-center  w-full px-10 py-4 space-x-10">
+            <div className="flex items-center space-x-4"></div>
             <div className="flex items-center space-x-4">
-              <ul className="hidden md:flex space-x-6">
-                <li>
-                  <a className="hover:text-gray-300 text-white" href="#">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-300 text-white" href="#">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-300 text-white" href="#">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-300 text-white" href="#">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-gray-300 text-white" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Button className="bg-secondary text-black shadow-2xl hover:shadow-white hover:bg-white flex items-center px-4 py-2  rounded-md">
-                <span className="mr-2">Download Now</span>
+              <Button className=" bg-white border-dotted shadow-2xl hover:shadow-white hover:bg-white flex items-center px-4 py-2  rounded-md">
+                <span className="mr-2 text-black font-semibold">
+                  Download Now
+                </span>
                 <AppleIcon className="text-black mr-1" />
                 <SmartphoneIcon className="text-black" />
               </Button>
@@ -110,14 +79,6 @@ export default function Component() {
             </div>
           </div>
         </main>
-
-        {/* gradient start */}
-        <div className=" rounded-full  ">
-          <div className="flex overflow-hidden justify-between py-2">
-            <div className="absolute z-[99] w-[10%] overflow-hidden ml-72  h-[70%] top-0 blue__gradient " />
-          </div>
-          <div className="absolute rounded-full mt-24 ml-44 overflow-hidden  z-[10] w-[10%] h-[20%] right-20 bottom-20 blue__gradient" />
-        </div>
       </div>
     </div>
   );

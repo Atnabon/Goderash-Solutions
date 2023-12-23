@@ -3,13 +3,13 @@ import styles from "./Services.module.css";
 
 const Services = ({ content, name, title, img }) => (
   <div
-    className={` relative fized inset-0 bg-black  w-full h-full flex flex-wrap items-center justify-center text-white font-semibold py-4 px-6 rounded-[20px] transition-opacity duration-300 opacity-1 hover:opacity-100`}
+    className={` relative  bg-black  w-full h-full flex flex-wrap items-center justify-center text-white font-semibold py-4 px-6 rounded-[20px] `}
   >
     <div className="flex md:flex-row items-center justify-center flex-wrap ">
       <img
         src={img}
         alt={name}
-        className={`w-[80%] h-[60%] md:w-[50%]   md:h-auto md:mb-0 md:mr-4 object-cover rounded-[20px] ${styles.image}`}
+        className={`w-[80%] h-[60%] md:w-[50%]   md:h-auto md:mb-0 md:mr-4  rounded-[20px] ${styles.image}`}
       />
       <div className="flex flex-col ">
         <p className=" md:h-auto md:mb-0 md:mr-4 font-normal text-[18px] leading-[32.4px] text-white my-10">
@@ -21,12 +21,12 @@ const Services = ({ content, name, title, img }) => (
           </h4>
         </div>
         <div
-          className={`absolute inset-0 hover:space-y-10 sm:block hidden  hover:border-1 hover:shadow-md hover:shadow-white bg-black bg-opacity-100 w-full h-full  items-center   justify-center text-white font-semibold   py-4 px-6 rounded-[20px] transition-opacity duration-800 opacity-0 hover:opacity-100`}
+          className={`absolute inset-1 hover:space-y-10 sm:block hidden  hover:border-1 hover:shadow-md hover:shadow-white bg-black  w-full h-full items-center justify-center text-white font-semibold   py-4 px-6 rounded-[20px] `}
         >
           <img
             src={img}
             alt={name}
-            className={`w-[80%] h-[60%] md:w-[50%] hover:scale-105 justify-center items-center hover:animate-spin hover:border-4 hover:shadow-md mb-10 md:h-auto md:mb-0 md:mr-4 object-cover rounded-[20px] ${styles.image}`}
+            className={`w-[80%] h-[60%] md:w-[50%] hover:scale-105 justify-center items-center hover:animate-spin hover:border-4 hover:shadow-md mb-10 md:h-auto md:mb-0 md:mr-4  rounded-[20px] ${styles.image}`}
           />
           <p>{title}</p>
         </div>

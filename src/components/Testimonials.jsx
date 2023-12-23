@@ -58,7 +58,7 @@ const Testimonials = () => {
                 src={arrowL}
                 alt="arrowl"
                 onClick={handlePrevPage}
-                className="mr-2 bg-white animate-bounce"
+                className="mr-2 bg-white"
               />
             )}
             Prev
@@ -66,12 +66,11 @@ const Testimonials = () => {
               src={arrowR}
               alt="arrowr"
               onClick={handleNextPage}
-              className="mr-2 bg-white animate-bounce accent-lime-50"
+              className="mr-2 bg-white "
             />
           </div>
         )}
       </div>
-      <div className="absolute z-[0] w-[10%] h-[10%] mt-96 rounded-full blue__gradient bottom-40" />
     </section>
   );
 };

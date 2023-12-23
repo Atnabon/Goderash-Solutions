@@ -22,8 +22,10 @@ import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
 import im from "./im.svg";
 import show from "./show.svg";
+import fuel1 from "./fuel1.svg";
 
 export {
+  fuel1,
   show,
   im,
   arrowL,

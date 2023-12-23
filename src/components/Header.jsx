@@ -6,7 +6,83 @@ import styles from "../style";
 import { arrowUp } from "../assets";
 import { show } from "../assets";
 
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Fragment, useState, useEffect } from "react";
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+
+const products = [
+  {
+    name: "Fuel Delivery",
+    description: "Get a better ",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Car Wash",
+    description: "Speak directly ",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Trye",
+    description: "Your customers’ ",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Battery",
+    description: "Connect with ",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Engie OiL",
+    description: "Build strategic ",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+  {
+    name: "Emrgency ",
+    description: "Build strategic ",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
+
 export default function Component() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrollingDown, setScrollingDown] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      setScrollingDown(currentScrollY > prevScrollY);
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
+
+  const shouldHideNav = scrollingDown && prevScrollY > 80;
   return (
     <div className="relative bg-slate-950 overflow-hidden">
       <div className="absolute inset-0">
@@ -24,7 +100,11 @@ export default function Component() {
       </div>
       <div className="relative  flex flex-col items-center justify-between px-10">
         {/* header*/}
-        <header className=" w-screen fixed  flex bg-[#0064ff] justify-between items-center">
+        <header
+          className={`w-screen fixed flex bg-[#0064ff] justify-between items-center transition-all  ${
+            shouldHideNav ? "-translate-y-16" : "translate-y-0"
+          }`}
+        >
           <div className="flex items-center">
             <h1 className="text-3xl ml-14  space-x-2  shadow-lg">
               <span className=" text-white font-poppins ">GO</span>
@@ -32,8 +112,100 @@ export default function Component() {
             </h1>
           </div>
 
-          <nav className="flex justify-between items-center  w-full px-10 py-4 space-x-10">
-            <div className="flex items-center space-x-4"></div>
+          <nav className="flex ml-48 justify-between items-center  w-full px-10 py-4 space-x-10">
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center text-white font-medium rounded-md p-2.5 "
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only text-white font-medium">
+                  Open main menu
+                </span>
+                <Bars3Icon className="h-6 w-6 text-white " aria-hidden="true" />
+              </button>
+            </div>
+            <Popover.Group className="hidden lg:flex lg:gap-x-8">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+                  Services
+                  <ChevronDownIcon
+                    className="h-5 w-5 flex-none text-white font-medium"
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen h-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-2 flex">
+                      {/* First Column */}
+                      <div className="flex flex-wrap ">
+                        {products.map((item) => (
+                          <div
+                            key={item.name}
+                            className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          >
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                              <item.icon
+                                className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            <div className="flex-auto">
+                              <a
+                                href={item.href}
+                                className="block font-semibold text-gray-900"
+                              >
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </a>
+                              <p className="mt-1 text-gray-600">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+
+              <a
+                href="#"
+                className="text-sm font-semibold leading-6 text-white "
+              >
+                Features
+              </a>
+              <a
+                href="#"
+                className="text-sm font-semibold leading-6 text-white"
+              >
+                Marketplace
+              </a>
+              <a
+                href="#"
+                className="text-sm font-semibold leading-6 text-white "
+              >
+                Company
+              </a>
+            </Popover.Group>
+            <div className="hidden lg:ml-10 lg:flex  lg:flex-1 lg:justify-end">
+              <a
+                href="/login"
+                className="text-sm font-semibold leading-6 text-white"
+              >
+                Log in <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
             <div className="flex items-center space-x-4">
               <Button className=" bg-white border-dotted shadow-2xl hover:shadow-white hover:bg-white flex items-center px-4 py-2  rounded-md">
                 <span className="mr-2 text-black font-semibold">

@@ -31,7 +31,7 @@ const Products = () => {
       id="clients"
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative py-2 border-white `}
     >
-      <div className="absolute z-[0] w-[100%] h-[100%] rounded-full blue__gradient bottom-40" />
+      <div className="absolute z-[10] w-[40%] h-[50%] rounded-full blue__gradient bottom-40" />
 
       <div className="w-full flex justify-between items-center md:flex-row flex-col sm:mb-16 mb-6 relative z-[1]">
         <h2 className={styles.heading2}>

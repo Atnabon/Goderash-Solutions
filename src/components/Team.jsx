@@ -42,7 +42,7 @@ const Team = () => {
           <img
             src={im}
             alt="im"
-            className="p-1 ml-10 w-10 hover:border-3 hover:shadow-md hover:scale-150 scale-105 hover:shadow-white bg-secondary hover:bg-white rounded-full transition-opacity duration-800 opacity-1 hover:opacity-100 "
+            className=" ml-10 w-10 hover:border-3 hover:shadow-md hover:scale-150  hover:shadow-white bg-secondary hover:bg-white rounded-full transition-opacity duration-800 opacity-1 hover:opacity-100 "
           />
           <div className="flex flex-col md:flex-row mt-2 justify-center space-y-4 md:space-x-4">
             <Card className=" w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
@@ -64,7 +64,7 @@ const Team = () => {
           <img
             src={im}
             alt="im"
-            className="p-1 ml-28 w-10 hover:border-3  hover:shadow-md hover:scale-150 scale-105 hover:shadow-white bg-secondary hover:bg-white rounded-full transition-opacity duration-800 opacity-1 hover:opacity-100"
+            className="p-1 ml-28 w-10 hover:border-3  hover:shadow-md hover:scale-150  hover:shadow-white bg-secondary hover:bg-white rounded-full transition-opacity duration-800 opacity-1 hover:opacity-100"
           />
           <div className="flex flex-col mt-2 ml-10  md:flex-row justify-center space-y-4 md:space-x-4">
             <Card className="w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">

@@ -11,6 +11,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import Register from "./pages/Register.jsx";
+import Fuel from "./pages/Fuel.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -20,7 +21,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/admin" element={<Home />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="register" element={<Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/fuelpage" element={<Fuel />} />
       </Routes>
       <Footer />
     </AuthProvider>

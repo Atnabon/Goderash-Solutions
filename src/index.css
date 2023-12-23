@@ -146,3 +146,30 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+/* Add this to your CSS styles */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 10s linear infinite; /* You can adjust the duration and timing function as needed */
+}
+
+.animate-slide-right {
+  animation: slideRight 10s linear infinite; /* You can adjust the duration and timing function as needed */
+}

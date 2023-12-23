@@ -3,7 +3,6 @@ import b from "./b.png";
 import splah from "./splah.png";
 import arrowL from "./arrowL.svg";
 import arrowR from "./arrowR.svg";
-
 import fuel from "./fuel.jpg";
 import logo1 from "./logo1.png";
 import quotes from "./quotes.svg";
@@ -23,8 +22,14 @@ import twitter from "./twitter.svg";
 import im from "./im.svg";
 import show from "./show.svg";
 import fuel1 from "./fuel1.svg";
+import rote from "./rote.svg";
+import imagefuely from "./imagefuely.jpg";
+import FuelDelivery from "./FuelDelivery.png";
 
 export {
+  imagefuely,
+  FuelDelivery,
+  rote,
   fuel1,
   show,
   im,

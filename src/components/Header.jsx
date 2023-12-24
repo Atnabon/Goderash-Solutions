@@ -27,37 +27,37 @@ const products = [
   {
     name: "Fuel Delivery",
     description: "Get a better ",
-    href: "#",
+    href: "/fuel",
     icon: ChartPieIcon,
   },
   {
     name: "Car Wash",
     description: "Speak directly ",
-    href: "#",
+    href: "/carwash",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Trye",
     description: "Your customers’ ",
-    href: "#",
+    href: "/tyre",
     icon: FingerPrintIcon,
   },
   {
     name: "Battery",
     description: "Connect with ",
-    href: "#",
+    href: "battery",
     icon: SquaresPlusIcon,
   },
   {
     name: "Engie OiL",
     description: "Build strategic ",
-    href: "#",
+    href: "engineoil",
     icon: ArrowPathIcon,
   },
   {
     name: "Emrgency ",
     description: "Build strategic ",
-    href: "#",
+    href: "emergance",
     icon: ArrowPathIcon,
   },
 ];

@@ -1,6 +1,3 @@
-import styles from "../style";
-
-import { FuelDelivery, imagefuely } from "../assets";
 
 const Fuel1 = () => {
   return (
@@ -11,11 +8,11 @@ const Fuel1 = () => {
           <br />
           <span className="text-black">in Ethiopia...!</span>
         </h2>
-        <div className="text-black w-screen md:w-1/2 text-[20px] font-sans">
+        <div className="text-black w-screen  text-[20px] font-sans">
           Looking for a quicker, more convenient way to fill up? Go Derash’s got
-          you covered. Get fuel delivery in Ethiopia, providing services across
-          the country. Giving you the freedom to make the most of your precious
-          time
+          you covered. <br /> Get fuel delivery in Ethiopia, providing services
+          across the country. <br /> Giving you the freedom to make the most of
+          your precious time
         </div>
       </div>
       <br />

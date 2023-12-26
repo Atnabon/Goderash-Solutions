@@ -88,7 +88,7 @@ export default function Component() {
       <div className="absolute inset-0">
         <img
           alt="Background"
-          className="w-full h-full object-cover animate-pulse"
+          className="w-full h-full object-cover "
           height="2048"
           src={b}
           style={{
@@ -105,13 +105,6 @@ export default function Component() {
             shouldHideNav ? "-translate-y-16" : "translate-y-0"
           }`}
         >
-          <div className="flex items-center">
-            <h1 className="text-3xl ml-14  space-x-2  shadow-lg">
-              <span className=" text-white font-poppins ">GO</span>
-              <span className=" text-white font-sans-serif">DERASH</span>
-            </h1>
-          </div>
-
           <nav className="flex ml-48 justify-between items-center  w-full px-10 py-4 space-x-10">
             <div className="flex lg:hidden">
               <button
@@ -124,6 +117,12 @@ export default function Component() {
                 </span>
                 <Bars3Icon className="h-6 w-6 text-white " aria-hidden="true" />
               </button>
+            </div>
+            <div className="flex items-center -translate-x-44 ">
+              <h1 className="text-3xl  space-x-2 shadow-lg">
+                <span className=" text-white font-poppins ">GO</span>
+                <span className=" text-white font-sans-serif">DERASH</span>
+              </h1>
             </div>
             <Popover.Group className="hidden lg:flex lg:gap-x-8">
               <Popover className="relative">
@@ -144,16 +143,16 @@ export default function Component() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen h-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute bg-[#0064ff]   z-10 mt-3 w-screen h-60  rounded-3xl shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-2 flex">
                       {/* First Column */}
-                      <div className="flex flex-wrap ">
+                      <div className="flex flex-auto   ">
                         {products.map((item) => (
                           <div
                             key={item.name}
-                            className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                            className="group relative text-white flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                           >
-                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 ">
                               <item.icon
                                 className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                                 aria-hidden="true"
@@ -162,12 +161,12 @@ export default function Component() {
                             <div className="flex-auto">
                               <a
                                 href={item.href}
-                                className="block font-semibold text-gray-900"
+                                className="block font-semibold text-white"
                               >
                                 {item.name}
                                 <span className="absolute inset-0" />
                               </a>
-                              <p className="mt-1 text-gray-600">
+                              <p className="mt-1 text-white">
                                 {item.description}
                               </p>
                             </div>
@@ -198,7 +197,7 @@ export default function Component() {
                 Company
               </a>
             </Popover.Group>
-            <div className="hidden lg:ml-10 lg:flex  lg:flex-1 lg:justify-end">
+            <div className="hidden lg:ml-10 lg:flex -translate-x-14  lg:flex-1 lg:justify-end">
               <a
                 href="/login"
                 className="text-sm font-semibold leading-6 text-white"

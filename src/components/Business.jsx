@@ -37,7 +37,7 @@ const Business = () => (
         earning rewards and saving money, saving time.
       </p>
 
-      <Button className=" bg-secondary text-black shadow-2xl hover:shadow-orange-600 hover:bg-yellow-800  mt-4 w-28 ">
+      <Button className=" bg-secondary text-black shadow-2xl hover:white hover:bg-yellow-800  mt-4 w-28 ">
         Sign up
       </Button>
     </div>

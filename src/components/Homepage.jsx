@@ -6,6 +6,7 @@ import styles from "@/style";
 import Products from "./products";
 import Sub from "./Sub";
 import Team from "./Team";
+import CTA from "./CTA";
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
         <div className={`${styles.boxWidth}`}>
           <HowTo />
           <Products />
+          <CTA />
           <Team />
           <Sub />
           <Business />

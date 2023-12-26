@@ -225,3 +225,24 @@ export const services = [
     img: fuel,
   },
 ];
+
+export const stats = [
+  {
+    id: "per litre",
+    title: "AED Diesel",
+    value: "3.19",
+    litre: "per litre",
+  },
+  {
+    id: "per litre",
+    title: "AED Super ",
+    value: "2.96 ",
+    litre: "98 per litre",
+  },
+  {
+    id: " per litre",
+    title: "AED Special ",
+    value: "2.85",
+    litre: "95 per litre",
+  },
+];

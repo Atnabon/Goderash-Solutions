@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import b from "../assets/b.png";
 import styles from "../style";
 import { show, rote } from "../assets";

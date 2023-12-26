@@ -25,8 +25,12 @@ import fuel1 from "./fuel1.svg";
 import rote from "./rote.svg";
 import imagefuely from "./imagefuely.jpg";
 import FuelDelivery from "./FuelDelivery.png";
+import c1 from "./c1.jpg";
+import c2 from "./c2.jpg";
 
 export {
+  c1,
+  c2,
   imagefuely,
   FuelDelivery,
   rote,

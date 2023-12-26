@@ -185,10 +185,10 @@ export default function Component() {
                 Features
               </a>
               <a
-                href="#"
+                href="/orderpage"
                 className="text-sm font-semibold leading-6 text-white"
               >
-                Marketplace
+                Order Now
               </a>
               <a
                 href="#"

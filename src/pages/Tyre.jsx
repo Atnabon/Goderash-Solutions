@@ -4,7 +4,7 @@ import styles from "../style";
 import { show, rote } from "../assets";
 import Fuel1 from "./Fuel1";
 
-const Trye = () => {
+const Tyre = () => {
   return (
     <div className=" bg-[#011730] overflow-hidden">
       <div className="relative bg-[#011730] overflow-hidden">
@@ -51,4 +51,4 @@ const Trye = () => {
   );
 };
 
-export default Trye;
+export default Tyre;

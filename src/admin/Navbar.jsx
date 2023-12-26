@@ -2,7 +2,7 @@ import React from "react";
 import log_icon from "../assets/image/logo/logo-icon.svg";
 import { NavLink } from "react-router-dom";
 import DarkModeSwitcher from "./DarkModeSwitcher";
-// import DripdownNotification from "./DripdownNotification";
+import DripdownNotification from "./DripdownNotification";
 
 const Navbar = ({ title }) => {
   return (

@@ -27,8 +27,28 @@ import imagefuely from "./imagefuely.jpg";
 import FuelDelivery from "./FuelDelivery.png";
 import c1 from "./c1.jpg";
 import c2 from "./c2.jpg";
+import batter from "./battery.png";
+import bl from "./bl.png";
+import wheel from "./wheel.png";
+import insurance from "./insurance.png";
+import tanker from "./tanker.png";
+import oil from "./oil.png";
+import car from "./car.png";
+import fuel2 from "./fuel2.png";
+import fuel3 from "./fuel3.jpg";
+import call from "./call.png";
 
 export {
+  call,
+  fuel3,
+  fuel2,
+  insurance,
+  tanker,
+  oil,
+  car,
+  wheel,
+  batter,
+  bl,
   c1,
   c2,
   imagefuely,

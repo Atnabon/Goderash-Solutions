@@ -1,6 +1,19 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  batter,
+  bl,
+  wheel,
+  insurance,
+  car,
+  oil,
+  tanker,
+  fuel2,
+  fuel1,
+  splah,
+  call,
+} from "../assets";
 
 function Orderpage() {
   const history = useNavigate();
@@ -39,16 +52,23 @@ function Orderpage() {
   return (
     <div className="flex justify-center items-center py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-center text-black mb-16">
+        <h2 className="text-3xl font-extrabold text-center text-secondary mb-16">
           Choose Your Seervices
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Fuel */}
           <Link to="/order-fuel" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <SmartphoneIcon className="mx-auto h-12 w-12 text-black" />
-              <h3 className="mt-5 text-lg leading-6 font-medium">Fuel</h3>
-              <p className="mt-2 text-base">
+              <img
+                src={splah}
+                alt="battery"
+                className=" justify-center items-center ml-1 font-extrabold"
+                width={250}
+                height={150}
+              />
+              <div className="mx-auto h-12 w-12 text-black" />
+              <h3 className=" text-lg leading-6 font-medium">Fuel</h3>
+              <p className=" text-base">
                 Download the app and start saving time with Goderash.
               </p>
               <Button
@@ -63,11 +83,15 @@ function Orderpage() {
           {/* CarWash */}
           <Link to="/order-carwash" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <CalendarCheckIcon className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={car}
+                alt="battery"
+                className=" justify-center items-center ml-14 mt-7 font-extrabold"
+              />
+              <div className="mx-auto h-12 w-12 text-black" />
               <h3 className="mt-5 text-lg leading-6 font-medium">CarWash</h3>
-              <p className="mt-2 text-base">
-                Open the app, anytime. Order and pay for a fuel delivery, car
-                wash, oil or tyre change, or battery service.
+              <p className=" text-base">
+                Open the app, anytime. Order and pay for a fuel delivery,
               </p>
               <Button
                 onClick={() => handleOrderClick("general")}
@@ -81,11 +105,16 @@ function Orderpage() {
           {/* Tyre */}
           <Link to="/order-tyre" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <CarIcon className="mx-auto h-12 w-12 text-black" />
+              <div className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={wheel}
+                alt="battery"
+                className=" justify-center items-center ml-14 font-extrabold"
+              />
               <h3 className="mt-5 text-lg leading-6 font-medium">Tyre</h3>
               <p className="mt-2 text-base">
                 Make sure your car is easily accessible (and don’t forget to
-                open your fuel cap if you’ve ordered a fuel delivery).
+                open your
               </p>
               <Button
                 onClick={() => handleOrderClick("general")}
@@ -99,7 +128,12 @@ function Orderpage() {
           {/* EngineOil */}
           <Link to="/order-engineoil" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <ThumbsUpIcon className="mx-auto h-12 w-12 text-black" />
+              <div className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={tanker}
+                alt="battery"
+                className=" justify-center items-center ml-14 font-extrabold"
+              />
               <h3 className="mt-5 text-lg leading-6 font-medium">EngineOil</h3>
               <p className="mt-2 text-base">
                 And we’re on our way. No queues, no hassle. Simpler. Smarter.
@@ -117,7 +151,12 @@ function Orderpage() {
           {/* Bolo */}
           <Link to="/apply-for--bolo" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <ThumbsUpIcon className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={insurance}
+                alt="battery"
+                className=" justify-center items-center ml-14 font-extrabold"
+              />
+              <div className="mx-auto h-12 w-12 text-black" />
               <h3 className="mt-5 text-lg leading-6 font-medium">Bolo</h3>
               <p className="mt-2 text-base">
                 And we’re on our way. No queues, no hassle. Simpler. Smarter.
@@ -135,7 +174,12 @@ function Orderpage() {
           {/* Insurance */}
           <Link to="/apply-for-insurance" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <ThumbsUpIcon className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={insurance}
+                alt="battery"
+                className=" justify-center items-center ml-14 font-extrabold"
+              />
+              <div className="mx-auto h-12 w-12 text-black" />
               <h3 className="mt-5 text-lg leading-6 font-medium">Insurance</h3>
               <p className="mt-2 text-base">
                 And we’re on our way. No queues, no hassle. Simpler. Smarter.
@@ -153,7 +197,12 @@ function Orderpage() {
           {/* Battery */}
           <Link to="/order-battery" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <ThumbsUpIcon className="mx-auto h-12 w-12 text-black" />
+              <div className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={batter}
+                alt="battery"
+                className=" justify-center items-center ml-14 font-extrabold"
+              />
               <h3 className="mt-5 text-lg leading-6 font-medium">Battery</h3>
               <p className="mt-2 text-base">
                 And we’re on our way. No queues, no hassle. Simpler. Smarter.
@@ -171,9 +220,14 @@ function Orderpage() {
           {/* Emergance */}
           <Link to="/order-for-emergance" className="text-center text-black">
             <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
-              <ThumbsUpIcon className="mx-auto h-12 w-12 text-black" />
+              <img
+                src={call}
+                alt="battery"
+                className=" justify-center items-center ml-14  font-extrabold"
+              />
+              <div className="mx-auto h-12 w-12 text-black" />
               <h3 className="mt-5 text-lg leading-6 font-medium">Emergance</h3>
-              <p className="mt-2 text-base">
+              <p className=" text-base">
                 And we’re on our way. No queues, no hassle. Simpler. Smarter.
                 Goderash.
               </p>

@@ -1,13 +1,15 @@
+import { Check } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const FuelOrderPage = () => {
+const OrderOil = () => {
   const [formData, setFormData] = useState({
     name: "",
     vehicleType: "",
     deliveryAddress: "",
-    fuelType: "",
+    enginesize: "",
+    typeofoil: "",
     quantity: "",
-    numvehicle: "",
     arrrivaltime: "",
   });
 
@@ -27,7 +29,7 @@ const FuelOrderPage = () => {
 
   return (
     <div className="container mx-auto mt-10 bottom-6 -translate-y-7">
-      <h1 className="text-4xl font-bold mb-6">Fuel Delivery Order</h1>
+      <h1 className="text-4xl font-bold mb-6 ">Oil Delivery Order</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
@@ -63,19 +65,64 @@ const FuelOrderPage = () => {
             required
           />
         </div>
-
         <div className="mb-4">
           <label
-            htmlFor="numvehicle"
+            htmlFor="tyresize"
             className="block text-sm font-medium text-gray-600"
           >
-            Number Of Vehicle
+            What is your engine size ?
           </label>
           <input
             type="number"
-            id="numvehicle"
-            name="numvehicle"
-            value={formData.numvehicle}
+            id="enginesize"
+            name="enginesize"
+            value={formData.enginesize}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+          <div>
+            <p className=" text-lg text-green-500">
+              To provide you with accurate Price we need your engine size if you
+              are not sure we show you the price range
+            </p>
+          </div>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="batteryType"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Select Oil Type
+          </label>
+          <select
+            id="typeofoil"
+            name="typeofoil"
+            value={formData.typeofoil}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          >
+            <option value="">Select Your Oil</option>
+            <option value="mobil1">Mobil 1</option>
+            <option value="mobilsuper">Mobil Super 3000</option>
+            <option value="mobilesuper2000"> MObil super 2000</option>
+          </select>
+          <p className=" text-secondary"> what does it include ?</p>
+        </div>
+
+        <div className="mb-4">
+          <label
+            htmlFor="quantity"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Number of Oil
+          </label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            value={formData.quantity}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
@@ -100,47 +147,10 @@ const FuelOrderPage = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="fuelType"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Select Fuel Type
-          </label>
-          <select
-            id="fuelType"
-            name="fuelType"
-            value={formData.fuelType}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          >
-            <option value="">Select Fuel Type</option>
-            <option value="petrol">Petrol</option>
-            <option value="diesel">Diesel</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="quantity"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Quantity (in liters)
-          </label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            value={formData.quantity}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
             htmlFor="arrivaltime"
             className="block text-sm font-medium text-gray-600"
           >
-            Quantity (in liters)
+            Select Arrival Day and Time
           </label>
           <input
             type="time"
@@ -152,15 +162,16 @@ const FuelOrderPage = () => {
             required
           />
         </div>
-        <button
+        <Link
+          to={"/orderdetails"}
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900 justify-center items-center"
         >
           Place Order
-        </button>
+        </Link>
       </form>
     </div>
   );
 };
 
-export default FuelOrderPage;
+export default OrderOil;

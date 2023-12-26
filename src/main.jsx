@@ -16,6 +16,12 @@ import Battery from "./pages/Battery.jsx";
 import Tyre from "./pages/Tyre.jsx";
 import Emergance from "./pages/Emergance.jsx";
 import Orderpage from "./pages/Orderpage.jsx";
+import FuelOrderPage from "./pages/OrderFuel.jsx";
+import OrderBattery from "./pages/OrderBattery.jsx";
+import TyreOrder from "./pages/TyreOrder.jsx";
+import OrderCarWash from "./pages/OrderCarWash.jsx";
+import OrderOil from "./pages/OrderOil.jsx";
+import OrderPage from "./pages/OrderDetails.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -33,6 +39,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/engineoil" element={<EngineOil />} />
         <Route path="/emergance" element={<Emergance />} />
         <Route path="/orderpage" element={<Orderpage />} />
+        <Route path="/order-fuel" element={<FuelOrderPage />} />
+        <Route path="/order-battery" element={<OrderBattery />} />
+        <Route path="/order-tyre" element={<TyreOrder />} />
+        <Route path="/order-carwash" element={<OrderCarWash />} />
+        <Route path="/order-engineoil" element={<OrderOil />} />
+        <Route path="/orderdetails" element={<OrderPage />} />
       </Routes>
       <Footer />
     </AuthProvider>

@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-const FuelOrderPage = () => {
+const OrderCarWash = () => {
   const [formData, setFormData] = useState({
     name: "",
     vehicleType: "",
     deliveryAddress: "",
-    fuelType: "",
+    typeofcarwash: "",
     quantity: "",
-    numvehicle: "",
     arrrivaltime: "",
   });
 
@@ -27,7 +26,7 @@ const FuelOrderPage = () => {
 
   return (
     <div className="container mx-auto mt-10 bottom-6 -translate-y-7">
-      <h1 className="text-4xl font-bold mb-6">Fuel Delivery Order</h1>
+      <h1 className="text-4xl font-bold mb-6">CarWash Delivery Order</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
@@ -63,19 +62,41 @@ const FuelOrderPage = () => {
             required
           />
         </div>
+        <div className="mb-4">
+          <label
+            htmlFor="batteryType"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Select a wash type
+          </label>
+          <select
+            id="typeofcarwash"
+            name="typeofcarwash"
+            value={formData.typeofcarwash}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          >
+            <option value="">Select a wash type</option>
+            <option value="classic-clean">Classic Clean</option>
+            <option value="interior">Classic Clean + interior</option>
+            <option value="agm">New Pressure Wash</option>
+            <option value="agm"> Premium Wash + Sanitisation</option>
+          </select>
+        </div>
 
         <div className="mb-4">
           <label
-            htmlFor="numvehicle"
+            htmlFor="quantity"
             className="block text-sm font-medium text-gray-600"
           >
-            Number Of Vehicle
+            Number Of Tyres
           </label>
           <input
             type="number"
-            id="numvehicle"
-            name="numvehicle"
-            value={formData.numvehicle}
+            id="quantity"
+            name="quantity"
+            value={formData.quantity}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
@@ -100,47 +121,10 @@ const FuelOrderPage = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="fuelType"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Select Fuel Type
-          </label>
-          <select
-            id="fuelType"
-            name="fuelType"
-            value={formData.fuelType}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          >
-            <option value="">Select Fuel Type</option>
-            <option value="petrol">Petrol</option>
-            <option value="diesel">Diesel</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="quantity"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Quantity (in liters)
-          </label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            value={formData.quantity}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
             htmlFor="arrivaltime"
             className="block text-sm font-medium text-gray-600"
           >
-            Quantity (in liters)
+            Select Arrival Day and Time
           </label>
           <input
             type="time"
@@ -163,4 +147,4 @@ const FuelOrderPage = () => {
   );
 };
 
-export default FuelOrderPage;
+export default OrderCarWash;

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const FuelOrderPage = () => {
+const OrderBattery = () => {
   const [formData, setFormData] = useState({
     name: "",
     vehicleType: "",
     deliveryAddress: "",
-    fuelType: "",
+    batteryType: "",
     quantity: "",
     numvehicle: "",
     arrrivaltime: "",
@@ -27,7 +27,7 @@ const FuelOrderPage = () => {
 
   return (
     <div className="container mx-auto mt-10 bottom-6 -translate-y-7">
-      <h1 className="text-4xl font-bold mb-6">Fuel Delivery Order</h1>
+      <h1 className="text-4xl font-bold mb-6">Battery Delivery Order</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
@@ -100,22 +100,23 @@ const FuelOrderPage = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="fuelType"
+            htmlFor="batteryType"
             className="block text-sm font-medium text-gray-600"
           >
-            Select Fuel Type
+            Select Battery Type
           </label>
           <select
-            id="fuelType"
-            name="fuelType"
-            value={formData.fuelType}
+            id="batteryTypee"
+            name="batteryType"
+            value={formData.batteryType}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           >
-            <option value="">Select Fuel Type</option>
-            <option value="petrol">Petrol</option>
-            <option value="diesel">Diesel</option>
+            <option value="">Select Battery Type</option>
+            <option value="standard">Standard</option>
+            <option value="primium">premium</option>
+            <option value="agm"> AGM</option>
           </select>
         </div>
         <div className="mb-4">
@@ -123,7 +124,7 @@ const FuelOrderPage = () => {
             htmlFor="quantity"
             className="block text-sm font-medium text-gray-600"
           >
-            Quantity (in liters)
+            Number of Battery
           </label>
           <input
             type="number"
@@ -140,7 +141,7 @@ const FuelOrderPage = () => {
             htmlFor="arrivaltime"
             className="block text-sm font-medium text-gray-600"
           >
-            Quantity (in liters)
+            Select Arrival Day and Time
           </label>
           <input
             type="time"
@@ -163,4 +164,4 @@ const FuelOrderPage = () => {
   );
 };
 
-export default FuelOrderPage;
+export default OrderBattery;

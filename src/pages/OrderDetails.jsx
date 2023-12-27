@@ -1,4 +1,5 @@
-import { Fragment, useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const products = [
@@ -16,8 +17,13 @@ const products = [
   },
 ];
 
-export default function OrderDetails() {
+const OrderDetails = () => {
   const [open, setOpen] = useState(true);
+  const history = useNavigate();
+
+  const handleContinueShopping = () => {
+    history.goBack();
+  };
 
   return (
     <div className="w-full h-full p-4 sm:p-6 lg:p-8">
@@ -36,7 +42,6 @@ export default function OrderDetails() {
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
-
                 <div className="flex-1 flex flex-col">
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <h3>
@@ -47,7 +52,6 @@ export default function OrderDetails() {
                   <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                   <div className="flex items-end justify-between text-sm mt-2">
                     <p className="text-gray-500">Qty {product.quantity}</p>
-
                     <div className="flex mt-1 sm:mt-0">
                       <button
                         type="button"
@@ -73,8 +77,10 @@ export default function OrderDetails() {
         </p>
         <div className="mt-4">
           <a
-            href="#"
-            className="flex items-center justify-center rounded-md border border-transparent  bg-secondary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+            href="https://chapa.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center rounded-md border border-transparent bg-secondary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
           >
             Checkout
           </a>
@@ -82,7 +88,11 @@ export default function OrderDetails() {
         <div className="mt-4 flex justify-center text-center text-sm text-gray-500">
           <p>
             or
-            <Button type="button" className="font-medium">
+            <Button
+              type="button"
+              onClick={handleContinueShopping}
+              className="font-medium"
+            >
               Continue Shopping
               <span aria-hidden="true"> &rarr;</span>
             </Button>
@@ -91,4 +101,6 @@ export default function OrderDetails() {
       </div>
     </div>
   );
-}
+};
+
+export default OrderDetails;

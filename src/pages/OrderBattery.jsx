@@ -1,15 +1,46 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const OrderBattery = () => {
+const BatteryOrderForm = () => {
+  const [categories, setCategories] = useState([]);
+  const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
-    name: "",
-    vehicleType: "",
-    deliveryAddress: "",
-    batteryType: "",
-    quantity: "",
-    numvehicle: "",
-    arrrivaltime: "",
+    car_type: "",
+    select_battery_service: "",
+    qty: 1,
+    arrivaltime: "",
+    category: "",
   });
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+        );
+        setCategories(response.data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchCarTypes = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+        );
+        setCarTypes(response.data);
+      } catch (error) {
+        console.error("Error fetching car types:", error);
+      }
+    };
+
+    fetchCarTypes();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,120 +50,69 @@ const OrderBattery = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add logic to handle the form submission, e.g., send data to backend
-    console.log("Form submitted:", formData);
+
+    try {
+      await axios.post(
+        "http://127.0.0.1:8000/api/base/user/batteryorder/",
+        formData
+      );
+      console.log("Battery order placed successfully!");
+      setFormData({
+        car_type: "",
+        select_battery_service: "",
+        qty: 1,
+        arrivaltime: "",
+        category: "",
+      });
+    } catch (error) {
+      console.error("Error placing battery order:", error);
+    }
   };
 
   return (
-    <div className="container mx-auto mt-10 bottom-6 -translate-y-7">
-      <h1 className="text-4xl font-bold mb-6">Battery Delivery Order</h1>
+    <div className="container mx-auto mt-10 p-4 bg-white shadow-lg rounded-lg">
+      <h1 className="text-3xl font-bold mb-6">Battery Order Form</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
-            htmlFor="vehicleType"
+            htmlFor="car_type"
             className="block text-sm font-medium text-gray-600"
           >
-            Vehicle Type
+            Select Car Type
           </label>
-          <input
-            type="text"
-            id="vehicleType"
-            name="vehicleType"
-            value={formData.vehicleType}
+          <select
+            id="car_type"
+            name="car_type"
+            value={formData.car_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-600"
           >
-            Full Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
+            <option value="">Select Car Type</option>
+            {carTypes.map((carType) => (
+              <option key={carType.id} value={carType.id}>
+                {carType.vehicle_type} - {carType.vehicle_model}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="mb-4">
           <label
-            htmlFor="numvehicle"
+            htmlFor="qty"
             className="block text-sm font-medium text-gray-600"
           >
-            Number Of Vehicle
+            Quantity
           </label>
           <input
             type="number"
-            id="numvehicle"
-            name="numvehicle"
-            value={formData.numvehicle}
+            name="qty"
+            value={formData.qty}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="deliveryAddress"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Delivery Address
-          </label>
-          <input
-            id="deliveryAddress"
-            name="deliveryAddress"
-            value={formData.deliveryAddress}
-            onChange={handleChange}
-            rows="4"
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="batteryType"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Select Battery Type
-          </label>
-          <select
-            id="batteryTypee"
-            name="batteryType"
-            value={formData.batteryType}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          >
-            <option value="">Select Battery Type</option>
-            <option value="standard">Standard</option>
-            <option value="primium">premium</option>
-            <option value="agm"> AGM</option>
-          </select>
-        </div>
-        <div className="mb-4">
-          <label
-            htmlFor="quantity"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Number of Battery
-          </label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            value={formData.quantity}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            min="1"
             required
           />
         </div>
@@ -141,11 +121,10 @@ const OrderBattery = () => {
             htmlFor="arrivaltime"
             className="block text-sm font-medium text-gray-600"
           >
-            Select Arrival Day and Time
+            Arrival Time
           </label>
           <input
-            type="time"
-            id="arrivaltime"
+            type="datetime-local"
             name="arrivaltime"
             value={formData.arrivaltime}
             onChange={handleChange}
@@ -153,9 +132,58 @@ const OrderBattery = () => {
             required
           />
         </div>
+        <div className="mb-4">
+          <label
+            htmlFor="category"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Select Category
+          </label>
+          <select
+            name="category"
+            value={formData.category || ""}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          >
+            <option key="default" value="">
+              Select Category
+            </option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.id}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="select_battery_service"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Select Battery Service
+          </label>
+          <select
+            type="text"
+            name="select_battery_service"
+            value={formData.select_battery_service}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          >
+            <option value="">Select Car Type</option>
+            <option value="standard">Standard</option>
+            <option value="standard">premium</option>
+
+            <option value="agm">AGM</option>
+          </select>
+          <p className=" text-secondary cursor-pointer mt-3">
+            {" "}
+            Learn More about Battery Service
+          </p>
+        </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900 justify-center items-center"
+          className="bg-blue-500 mt-3 text-white px-4 py-2 rounded-md hover:bg-blue-900"
         >
           Place Order
         </button>
@@ -164,4 +192,4 @@ const OrderBattery = () => {
   );
 };
 
-export default OrderBattery;
+export default BatteryOrderForm;

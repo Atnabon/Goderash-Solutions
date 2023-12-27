@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Add this line
+import axios from "axios";
 
 const OrderCarWash = () => {
+  const [categories, setCategories] = useState([]);
+  const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
-    name: "",
     car_type: "",
+    name: "",
     delivery_address: "",
     typeofcarwash: "",
     quantity: "",
+    arrivaltime: "",
+    category: "", // You can pre-select a default category or set it based on user input
   });
 
   const handleChange = (e) => {
@@ -18,35 +22,61 @@ const OrderCarWash = () => {
     }));
   };
 
+  useEffect(() => {
+    const fetchCarTypes = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+        );
+        setCarTypes(response.data);
+      } catch (error) {
+        console.error("Error fetching car types:", error);
+      }
+    };
+
+    fetchCarTypes();
+  }, []);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+        );
+        setCategories(response.data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Form Data:", formData);
-
     try {
-      const response = await axios.post(
+      await axios.post(
         "http://127.0.0.1:8000/api/base/user/carwashorder/",
         formData
       );
-
+      console.log("Car wash order placed successfully!");
       setFormData({
-        name: "",
         car_type: "",
+        name: "",
         delivery_address: "",
         typeofcarwash: "",
         quantity: "",
+        arrivaltime: "",
+        category: "",
       });
-
-      alert("Order added successfully!");
-      console.log("Car wash order placed successfully!", response.data);
     } catch (error) {
-      console.error("Error placing car wash order:", error.response);
+      console.error("Error placing car wash order:", error);
     }
   };
 
   return (
     <div className="container mx-auto mt-10 bottom-6 -translate-y-7">
-      <h1 className="text-4xl font-bold mb-6">CarWash Delivery Order</h1>
+      <h1 className="text-4xl font-bold mb-6">Car Wash Delivery Order</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
@@ -55,14 +85,21 @@ const OrderCarWash = () => {
           >
             Car Type
           </label>
-          <input
+          <select
             id="car_type"
             name="car_type"
             value={formData.car_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
-          ></input>
+          >
+            <option value="">Select Car Type</option>
+            {carTypes.map((car_type) => (
+              <option key={car_type.id} value={car_type.id}>
+                {car_type.vehicle_type} - {car_type.vehicle_model}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="mb-4">
           <label
@@ -83,12 +120,35 @@ const OrderCarWash = () => {
         </div>
         <div className="mb-4">
           <label
+            htmlFor="category"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Select Category
+          </label>
+          <select
+            name="category"
+            value={formData.category || ""}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          >
+            <option key="default" value="">
+              Select Category
+            </option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="mb-4">
+          <label
             htmlFor="typeofcarwash"
             className="block text-sm font-medium text-gray-600"
           >
             Select a wash type
           </label>
-          <input
+          <select
             id="typeofcarwash"
             name="typeofcarwash"
             value={formData.typeofcarwash}
@@ -96,22 +156,21 @@ const OrderCarWash = () => {
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           >
-            {/* <option value="">Select a wash type</option>
+            <option value="">Select a wash type</option>
             <option value="classic-clean">Classic Clean</option>
             <option value="classic-clean-interior">
               Classic Clean + Interior
             </option>
             <option value="new-pressure-wash">New Pressure Wash</option>
-            <option value="premium-wash">Premium Wash + Sanitization</option> */}
-          </input>
+            <option value="premium-wash">Premium Wash + Sanitization</option>
+          </select>
         </div>
-
         <div className="mb-4">
           <label
             htmlFor="quantity"
             className="block text-sm font-medium text-gray-600"
           >
-            Number Of Caars
+            Number Of Cars
           </label>
           <input
             type="number"
@@ -135,28 +194,10 @@ const OrderCarWash = () => {
             name="delivery_address"
             value={formData.delivery_address}
             onChange={handleChange}
-            rows="4"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           />
         </div>
-        {/* <div className="mb-4">
-          <label
-            htmlFor="arrivaltime"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Select Arrival Day and Time
-          </label>
-          <input
-            type="time"
-            id="arrivaltime"
-            name="arrivaltime"
-            value={formData.arrivaltime}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div> */}
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900 justify-center items-center"

@@ -10,8 +10,8 @@ const OrderCarWash = () => {
     delivery_address: "",
     typeofcarwash: "",
     quantity: "",
+    category: "",
     arrivaltime: "",
-    category: "", // You can pre-select a default category or set it based on user input
   });
 
   const handleChange = (e) => {
@@ -66,8 +66,8 @@ const OrderCarWash = () => {
         delivery_address: "",
         typeofcarwash: "",
         quantity: "",
-        arrivaltime: "",
         category: "",
+        arrivaltime: "",
       });
     } catch (error) {
       console.error("Error placing car wash order:", error);
@@ -86,17 +86,15 @@ const OrderCarWash = () => {
             Car Type
           </label>
           <select
-            id="car_type"
             name="car_type"
             value={formData.car_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
           >
             <option value="">Select Car Type</option>
-            {carTypes.map((car_type) => (
-              <option key={car_type.id} value={car_type.id}>
-                {car_type.vehicle_type} - {car_type.vehicle_model}
+            {carTypes.map((carType) => (
+              <option key={carType.id} value={carType.vehicle_type}>
+                {carType.vehicle_type}
               </option>
             ))}
           </select>
@@ -193,6 +191,22 @@ const OrderCarWash = () => {
             id="delivery_address"
             name="delivery_address"
             value={formData.delivery_address}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="arrivaltime"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Arrival Time
+          </label>
+          <input
+            type="datetime-local"
+            name="arrivaltime"
+            value={formData.arrivaltime}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required

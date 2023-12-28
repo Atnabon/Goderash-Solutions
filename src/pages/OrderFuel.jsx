@@ -1,14 +1,18 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const FuelOrderPage = () => {
+  const [categories, setCategories] = useState([]);
+  const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
-    name: "",
-    vehicleType: "",
-    deliveryAddress: "",
-    fuelType: "",
-    quantity: "",
-    numvehicle: "",
+    category: "",
+    car_type: "",
+    fuel_capacity: "",
+    current_fuel_level: "",
+    qty: "",
+    delivery_address: "",
     arrrivaltime: "",
+    fuel_type: "",
   });
 
   const handleChange = (e) => {
@@ -19,10 +23,54 @@ const FuelOrderPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    const fetchCarTypes = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+        );
+        setCarTypes(response.data);
+      } catch (error) {
+        console.error("Error fetching car types:", error);
+      }
+    };
+    fetchCarTypes();
+  }, []);
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+        );
+        setCategories(response.data);
+      } catch (error) {
+        console.log("Error fetching categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add logic to handle the form submission, e.g., send data to backend
-    console.log("Form submitted:", formData);
+    try {
+      await axios.post(
+        "http://127.0.0.1:8000/api/base/user/orderfuel/",
+        formData
+      );
+      console.log("Fuel order placed succeefull");
+      setFormData({
+        category: "",
+        car_type: "",
+        fuel_capacity: "",
+        current_fuel_level: "",
+        qty: "",
+        delivery_address: "",
+        arrrivaltime: "",
+        fuel_type: "",
+      });
+    } catch (error) {
+      console.error("Error placing Fuel order:", error);
+    }
   };
 
   return (
@@ -31,33 +79,60 @@ const FuelOrderPage = () => {
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label
-            htmlFor="vehicleType"
+            htmlFor="car_type"
             className="block text-sm font-medium text-gray-600"
           >
             Vehicle Type
           </label>
-          <input
-            type="text"
-            id="vehicleType"
-            name="vehicleType"
-            value={formData.vehicleType}
+          <select
+            name="car_type"
+            value={formData.car_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
+          >
+            <option value="">Select Car Type</option>
+            {carTypes.map((carType) => (
+              <option key={carType.id} value={carType.vehicle_type}>
+                {carType.vehicle_type}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="mb-4">
           <label
-            htmlFor="name"
+            htmlFor="category"
             className="block text-sm font-medium text-gray-600"
           >
-            Full Name
+            Select Category
+          </label>
+          <select
+            name="category"
+            value={formData.category || ""}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          >
+            <option key="default" value="">
+              Select Category
+            </option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="fuel_capacity"
+            className="block text-sm font-medium text-gray-600"
+          >
+            fuel capacity
           </label>
           <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+            type="number"
+            id="fuel_capacity"
+            name="fuel_capacity"
+            value={formData.fuel_capacity}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
@@ -66,49 +141,66 @@ const FuelOrderPage = () => {
 
         <div className="mb-4">
           <label
-            htmlFor="numvehicle"
+            htmlFor="current_fuel_level"
             className="block text-sm font-medium text-gray-600"
           >
-            Number Of Vehicle
+            current_fuel_level
           </label>
           <input
             type="number"
-            id="numvehicle"
-            name="numvehicle"
-            value={formData.numvehicle}
+            id="current_fuel_level"
+            name="current_fuel_level"
+            value={formData.current_fuel_level}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           />
         </div>
+
         <div className="mb-4">
           <label
-            htmlFor="deliveryAddress"
+            htmlFor="qty"
             className="block text-sm font-medium text-gray-600"
           >
-            Delivery Address
+            Number of Cars
           </label>
           <input
-            id="deliveryAddress"
-            name="deliveryAddress"
-            value={formData.deliveryAddress}
+            type="number"
+            id="qty"
+            name="qty"
+            value={formData.qty}
             onChange={handleChange}
-            rows="4"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           />
         </div>
         <div className="mb-4">
           <label
-            htmlFor="fuelType"
+            htmlFor="delivery_address"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Address
+          </label>
+          <input
+            id="delivery_address"
+            name="delivery_address"
+            value={formData.delivery_address}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="fuel_type"
             className="block text-sm font-medium text-gray-600"
           >
             Select Fuel Type
           </label>
           <select
-            id="fuelType"
-            name="fuelType"
-            value={formData.fuelType}
+            id="fuel_type"
+            name="fuel_type"
+            value={formData.fuel_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
@@ -140,11 +232,10 @@ const FuelOrderPage = () => {
             htmlFor="arrivaltime"
             className="block text-sm font-medium text-gray-600"
           >
-            Quantity (in liters)
+            Arrival Time
           </label>
           <input
-            type="time"
-            id="arrivaltime"
+            type="datetime-local"
             name="arrivaltime"
             value={formData.arrivaltime}
             onChange={handleChange}

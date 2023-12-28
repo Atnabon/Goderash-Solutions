@@ -156,10 +156,9 @@ const FuelOrderPage = () => {
             required
           />
         </div>
-
         <div className="mb-4">
           <label
-            htmlFor="qty"
+            htmlFor="current_fuel_level"
             className="block text-sm font-medium text-gray-600"
           >
             Number of Cars

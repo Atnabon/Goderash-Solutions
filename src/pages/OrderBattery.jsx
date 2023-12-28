@@ -7,11 +7,33 @@ const BatteryOrderForm = () => {
   const [formData, setFormData] = useState({
     car_type: "",
     select_battery_service: "",
-    qty: 1,
+    qty: "",
     arrivaltime: "",
     category: "",
+    delivery_address: "",
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  useEffect(() => {
+    const fetchCarTypes = async () => {
+      try {
+        const response = await axios.get(
+          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+        );
+        setCarTypes(response.data);
+      } catch (error) {
+        console.error("Error fetching car types:", error);
+      }
+    };
+
+    fetchCarTypes();
+  }, []);
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -27,29 +49,6 @@ const BatteryOrderForm = () => {
     fetchCategories();
   }, []);
 
-  useEffect(() => {
-    const fetchCarTypes = async () => {
-      try {
-        const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
-        );
-        setCarTypes(response.data);
-      } catch (error) {
-        console.error("Error fetching car types:", error);
-      }
-    };
-
-    fetchCarTypes();
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -62,9 +61,10 @@ const BatteryOrderForm = () => {
       setFormData({
         car_type: "",
         select_battery_service: "",
-        qty: 1,
+        qty: "",
         arrivaltime: "",
         category: "",
+        delivery_address: "",
       });
     } catch (error) {
       console.error("Error placing battery order:", error);
@@ -80,20 +80,18 @@ const BatteryOrderForm = () => {
             htmlFor="car_type"
             className="block text-sm font-medium text-gray-600"
           >
-            Select Car Type
+            Car Type
           </label>
           <select
-            id="car_type"
             name="car_type"
             value={formData.car_type}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
           >
             <option value="">Select Car Type</option>
             {carTypes.map((carType) => (
-              <option key={carType.id} value={carType.id}>
-                {carType.vehicle_type} - {carType.vehicle_model}
+              <option key={carType.id} value={carType.vehicle_type}>
+                {carType.vehicle_type}
               </option>
             ))}
           </select>
@@ -116,22 +114,7 @@ const BatteryOrderForm = () => {
             required
           />
         </div>
-        <div className="mb-4">
-          <label
-            htmlFor="arrivaltime"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Arrival Time
-          </label>
-          <input
-            type="datetime-local"
-            name="arrivaltime"
-            value={formData.arrivaltime}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
-        </div>
+
         <div className="mb-4">
           <label
             htmlFor="category"
@@ -150,7 +133,7 @@ const BatteryOrderForm = () => {
             </option>
             {categories.map((category) => (
               <option key={category.id} value={category.id}>
-                {category.id}
+                {category.name}
               </option>
             ))}
           </select>
@@ -181,6 +164,39 @@ const BatteryOrderForm = () => {
             Learn More about Battery Service
           </p>
         </div>
+        <div className="mb-4">
+          <label
+            htmlFor="delivery_address"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Address
+          </label>
+          <input
+            id="delivery_address"
+            name="delivery_address"
+            value={formData.delivery_address}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="arrivaltime"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Arrival Time
+          </label>
+          <input
+            type="datetime-local"
+            name="arrivaltime"
+            value={formData.arrivaltime}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+        </div>
+
         <button
           type="submit"
           className="bg-blue-500 mt-3 text-white px-4 py-2 rounded-md hover:bg-blue-900"

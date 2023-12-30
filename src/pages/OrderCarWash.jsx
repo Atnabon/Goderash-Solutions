@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const OrderCarWash = () => {
+  const history = useNavigate();
   const [categories, setCategories] = useState([]);
   const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
@@ -69,6 +71,8 @@ const OrderCarWash = () => {
         category: "",
         arrivaltime: "",
       });
+      history(`/payment/`);
+      window.location.reload();
     } catch (error) {
       console.error("Error placing car wash order:", error);
     }
@@ -215,6 +219,7 @@ const OrderCarWash = () => {
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900 justify-center items-center"
+          onClick={handleSubmit}
         >
           Place Order
         </button>

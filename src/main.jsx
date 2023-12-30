@@ -23,6 +23,7 @@ import OrderCarWash from "./pages/OrderCarWash.jsx";
 import OrderOil from "./pages/OrderOil.jsx";
 import OrderPage from "./pages/OrderDetails.jsx";
 import AddCar from "./pages/AddCar.jsx";
+import Payment from "./pages/Payment.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -47,6 +48,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/order-engineoil" element={<OrderOil />} />
         <Route path="/orderdetails" element={<OrderPage />} />
         <Route path="/addcar" element={<AddCar />} />
+        <Route path="/payment/" component={Payment} />
       </Routes>
       <Footer />
     </AuthProvider>

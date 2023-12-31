@@ -18,7 +18,6 @@ const Homepage = () => {
         <div className={`${styles.boxWidth}`}>
           <HowTo />
           <Products />
-
           <Team />
           <Sub />
           <Business />

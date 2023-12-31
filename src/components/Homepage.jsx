@@ -7,6 +7,7 @@ import Products from "./products";
 import Sub from "./Sub";
 import Team from "./Team";
 import CTA from "./CTA";
+import Footer from "./Footer";
 
 const Homepage = () => {
   return (
@@ -17,13 +18,15 @@ const Homepage = () => {
         <div className={`${styles.boxWidth}`}>
           <HowTo />
           <Products />
-          <CTA />
+
           <Team />
           <Sub />
           <Business />
+          <CTA />
           <Testimonials />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

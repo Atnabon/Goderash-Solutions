@@ -10,6 +10,10 @@ import {
   fuel,
   logo1,
   splah,
+  tanker,
+  oil,
+  fuel3,
+  insurance,
 } from "../assets";
 import { GiCarWheel } from "react-icons/gi";
 import { MdElectricCar } from "react-icons/md";
@@ -168,8 +172,17 @@ export const services = [
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: "Tyre...!",
     title: "Money is only a tool. It will take you wherever you wish, .",
-    img: logo1,
+    img: insurance,
   },
+  {
+    id: "services_2",
+    content:
+      "Money makes your life easier. If you're lucky to have it, you're lucky.",
+    name: "Tyre...!",
+    title: "Money is only a tool. It will take you wherever you wish, .",
+    img: insurance,
+  },
+
   {
     id: "services_3",
     content:
@@ -177,17 +190,17 @@ export const services = [
     name: "Trye...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will.",
-    img: splah,
+    img: insurance,
   },
 
   {
     id: "services_4",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Trye...!",
+    name: " battery",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will.",
-    img: splah,
+    img: fuel3,
   },
   {
     id: "services_5",
@@ -196,16 +209,18 @@ export const services = [
     name: "Car Wah...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not .",
-    img: logo1,
+    img: insurance,
   },
+
   {
     id: "services_6",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Insurances...!",
+    name: "IFuel",
     title: "Money is only a tool. It will take you wherever you wish, .",
-    img: fuel,
+    img: tanker,
   },
+
   {
     id: "services_7",
     content:
@@ -213,8 +228,9 @@ export const services = [
     name: "Fuel ...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not",
-    img: logo1,
+    img: oil,
   },
+
   {
     id: "services_8",
     content:

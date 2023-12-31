@@ -71,7 +71,7 @@ const OrderCarWash = () => {
         category: "",
         arrivaltime: "",
       });
-      history(`/payment/`);
+      history(`/payment`);
       window.location.reload();
     } catch (error) {
       console.error("Error placing car wash order:", error);

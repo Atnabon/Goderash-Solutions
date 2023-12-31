@@ -84,7 +84,7 @@ export default function Component() {
 
   const shouldHideNav = scrollingDown && prevScrollY > 80;
   return (
-    <div className="relative bg-slate-950 overflow-hidden">
+    <div className="relative font-sans bg-slate-950 overflow-hidden">
       <div className="absolute inset-0">
         <img
           alt="Background"
@@ -105,7 +105,7 @@ export default function Component() {
             shouldHideNav ? "-translate-y-16" : "translate-y-0"
           }`}
         >
-          <nav className="flex ml-48 justify-between items-center  w-full px-10 py-4 space-x-10">
+          <nav className="flex ml-48 justify-between items-center font-sans  w-full px-10 py-4 space-x-10">
             <div className="flex lg:hidden">
               <button
                 type="button"

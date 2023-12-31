@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import "./index.css";
 import Home from "./admin/Home.jsx";
 import Homepage from "./components/Homepage.jsx";
-import Footer from "./components/Footer.jsx";
+// import Footer from "./components/Footer.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import Register from "./pages/Register.jsx";
@@ -24,6 +24,7 @@ import OrderOil from "./pages/OrderOil.jsx";
 import OrderPage from "./pages/OrderDetails.jsx";
 import AddCar from "./pages/AddCar.jsx";
 import Payment from "./pages/Payment.jsx";
+import Calendar from "./admin/Calendar.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -48,9 +49,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/order-engineoil" element={<OrderOil />} />
         <Route path="/orderdetails" element={<OrderPage />} />
         <Route path="/addcar" element={<AddCar />} />
-        <Route path="/payment/" component={Payment} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/calender" element={<Calendar />} />
       </Routes>
-      <Footer />
     </AuthProvider>
   </Router>
 );

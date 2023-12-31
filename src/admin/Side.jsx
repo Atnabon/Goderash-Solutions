@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <aside className=" w-56 h-screen overflow-x-hidden overflow-y-auto  bg-black rounded-b-3xl rounded-t-xl  text-white">
+    <aside className=" fixed w-56 h-screen overflow-x-hidden overflow-y-auto  bg-black rounded-b-3xl rounded-t-xl  text-white">
       <aside>
         {/* <!-- SIDEBAR HEADER --> */}
         <div className="flex items-center justify-between gap-4 px-6 py-5.5 lg:py-6.5">
@@ -139,7 +139,7 @@ const Sidebar = () => {
                 {/* <!-- Menu Item Calendar --> */}
                 <li>
                   <NavLink
-                    to="/"
+                    to="/calendar"
                     className="group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 "
                   >
                     <svg

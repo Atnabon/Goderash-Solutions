@@ -32,7 +32,7 @@ function Orderpage() {
   };
 
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-white h-screen ">
       <div className="relative bg-[#011730] overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -77,14 +77,14 @@ function Orderpage() {
           Welcome To Order Page{" "}
           <span className="cursor-not-allowed">Choose Your Services</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => (
             <Link
               key={service.id}
               to={`/${service.slug}`}
               className="text-center text-black"
             >
-              <div className="bg-gray-100 p-4 rounded-md cursor-pointer transition-transform transform hover:scale-105">
+              <div className=" bg-sky-500 p-4 hover:bg-cyan-400 hover:duration-1000 hover:gap-y-5 hover:opacity-2 rounded-md cursor-pointer transition-transform transform hover:scale-105">
                 {service.image && (
                   <img
                     src={service.image}
@@ -98,7 +98,11 @@ function Orderpage() {
                 <h3 className="text-lg leading-6 font-medium">
                   {service.name}
                 </h3>
-                {/* <p className="text-base">{service.name}</p> */}
+                <h3 className="mx-auto text-lg leading-6 font-medium ">
+                  <span> Price</span> {service.price}
+                </h3>
+                <span>Description</span>
+                <p className="text-base">{service.description}</p>
                 <Button
                   onClick={() => handleOrderClick(service.slug)}
                   className="bg-lime-900 text-white px-4 py-2 rounded-full mt-8 hover:bg-red-600 focus:outline-none focus:ring focus:border-blue-300"

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const BatteryOrderForm = () => {
+  const history = useNavigate();
   const [categories, setCategories] = useState([]);
   const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
@@ -66,6 +68,8 @@ const BatteryOrderForm = () => {
         category: "",
         delivery_address: "",
       });
+      history(`/payment`);
+      window.location.reload();
     } catch (error) {
       console.error("Error placing battery order:", error);
     }
@@ -200,6 +204,7 @@ const BatteryOrderForm = () => {
         <button
           type="submit"
           className="bg-blue-500 mt-3 text-white px-4 py-2 rounded-md hover:bg-blue-900"
+          onClick={handleSubmit}
         >
           Place Order
         </button>

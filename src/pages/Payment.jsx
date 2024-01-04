@@ -27,6 +27,12 @@ const Payment = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white text-black">
       <div className="text-center">
+        <h1 className="text-5xl font-bold text-secondary hover:text-left animate-bounce mb-4">
+          Payment{" "}
+          <span className=" text-gradient font-extrabold">Intergration</span>{" "}
+          <span className=" text-orange-600 animate-spin">Comind Soon</span>{" "}
+          <span className=" text-emerald-500 animate-ping ">...!!!</span>
+        </h1>
         <h1 className="text-3xl font-bold mb-4">Payment Page</h1>
         <div className="mb-8">
           <h2 className="text-xl font-bold mb-2">Order Details</h2>

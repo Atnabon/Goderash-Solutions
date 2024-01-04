@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import styles from "../style";
 import Footer from "@/components/Footer";
+import Header from "../components/Header";
 
 import { show, rote, c1, c2, b } from "../assets";
 
@@ -34,6 +35,7 @@ function Orderpage() {
 
   return (
     <div className="bg-white h-screen ">
+      {/* <Header /> */}
       <div className="relative bg-[#011730] overflow-hidden">
         <div className="absolute inset-0">
           <img

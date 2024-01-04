@@ -71,7 +71,7 @@ export default function Component() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      setScrollingDown(currentScrollY > prevScrollY);
+      setScrollingDown(prevScrollY > currentScrollY);
       setPrevScrollY(currentScrollY);
     };
 
@@ -101,11 +101,11 @@ export default function Component() {
       <div className="relative  flex flex-col items-center justify-between px-10">
         {/* header*/}
         <header
-          className={`w-screen fixed flex bg-[#0064ff] justify-between items-center transition-all  ${
+          className={`w-screen fixed flex bg-[#143464]   justify-between items-center transition-all  ${
             shouldHideNav ? "-translate-y-16" : "translate-y-0"
           }`}
         >
-          <nav className="flex ml-48 justify-between items-center font-sans  w-full px-10 py-4 space-x-10">
+          <nav className="flex ml-48 justify-between items-center font-sans  w-full px-10 py-5 space-x-10">
             <div className="flex lg:hidden">
               <button
                 type="button"
@@ -143,14 +143,14 @@ export default function Component() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute bg-[#0064ff]   z-10 mt-3 w-screen h-60  rounded-3xl shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute bg-[#143464]  mt-3 h-60  rounded-3xl shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-2 flex">
                       {/* First Column */}
                       <div className="flex flex-auto   ">
                         {products.map((item) => (
                           <div
                             key={item.name}
-                            className="group relative text-white flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                            className="group relative text-white flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-emerald-900"
                           >
                             <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 ">
                               <item.icon

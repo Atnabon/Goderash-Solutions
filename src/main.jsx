@@ -36,7 +36,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/fuel" element={<Fuel />} />
-        <Route path="/trye" element={<Tyre />} />
+        <Route path="/tyre" element={<Tyre />} />
         <Route path="/carwash" element={<CarWash />} />
         <Route path="/battery" element={<Battery />} />
         <Route path="/engineoil" element={<EngineOil />} />

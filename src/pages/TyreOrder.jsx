@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const TyreOrder = () => {
+  const history = useNavigate();
   const [categories, setCategories] = useState([]);
   const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
@@ -71,6 +73,8 @@ const TyreOrder = () => {
         arrivaltime: "",
         category: "",
       });
+      history(`/payment`);
+      window.location.reload();
     } catch (error) {
       console.error("Error placing tyre order:", error);
     }
@@ -103,20 +107,28 @@ const TyreOrder = () => {
         </div>
         <div className="mb-4">
           <label
-            htmlFor="delivery_address"
+            htmlFor="category"
             className="block text-sm font-medium text-gray-600"
           >
-            Address
+            Select Category
           </label>
-          <input
-            id="delivery_address"
-            name="delivery_address"
-            value={formData.delivery_address}
+          <select
+            name="category"
+            value={formData.category || ""}
             onChange={handleChange}
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-            required
-          />
+          >
+            <option key="default" value="">
+              Select Category
+            </option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
         </div>
+
         <div className="mb-4">
           <label
             htmlFor="tyre_size"
@@ -141,7 +153,7 @@ const TyreOrder = () => {
           >
             Select Your Tyre
           </label>
-          <input
+          <select
             id="tyre_type"
             name="tyre_type"
             value={formData.tyre_type}
@@ -149,12 +161,12 @@ const TyreOrder = () => {
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             required
           >
-            {/* <option value="">Select Your Tyre</option>
+            <option value="">Select Your Tyre</option>
             <option value="standard">Bridgestone</option>
             <option value="primium">Kumho Tyre</option>
             <option value="agm"> Gooodyear</option>
-            <option value="agm"> Michelin</option> */}
-          </input>
+            <option value="agm"> Michelin</option>
+          </select>
         </div>
 
         <div className="mb-4">
@@ -174,7 +186,22 @@ const TyreOrder = () => {
             required
           />
         </div>
-
+        <div className="mb-4">
+          <label
+            htmlFor="delivery_address"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Address
+          </label>
+          <input
+            id="delivery_address"
+            name="delivery_address"
+            value={formData.delivery_address}
+            onChange={handleChange}
+            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+            required
+          />
+        </div>
         <div className="mb-4">
           <label
             htmlFor="arrivaltime"
@@ -191,32 +218,11 @@ const TyreOrder = () => {
             required
           />
         </div>
-        <div className="mb-4">
-          <label
-            htmlFor="category"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Select Category
-          </label>
-          <select
-            name="category"
-            value={formData.category || ""}
-            onChange={handleChange}
-            className="mt-1 p-2 border border-gray-300 rounded-md w-full"
-          >
-            <option key="default" value="">
-              Select Category
-            </option>
-            {categories.map((category) => (
-              <option key={category.id} value={category.id}>
-                {category.id}
-              </option>
-            ))}
-          </select>
-        </div>
+
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900"
+          onClick={handleSubmit}
         >
           Place Order
         </button>

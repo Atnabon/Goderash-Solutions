@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FuelOrderPage = () => {
+  const history = useNavigate();
   const [categories, setCategories] = useState([]);
   const [carTypes, setCarTypes] = useState([]);
   const [formData, setFormData] = useState({
@@ -68,6 +70,8 @@ const FuelOrderPage = () => {
         arrrivaltime: "",
         fuel_type: "",
       });
+      history(`/payment`);
+      window.location.reload();
     } catch (error) {
       console.error("Error placing Fuel order:", error);
     }
@@ -245,6 +249,7 @@ const FuelOrderPage = () => {
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-900 justify-center items-center"
+          onClick={handleSubmit}
         >
           Place Order
         </button>

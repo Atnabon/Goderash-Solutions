@@ -124,7 +124,7 @@ const OrderOil = () => {
             </option>
             {categories.map((category) => (
               <option key={category.id} value={category.id}>
-                {category.id}
+                {category.name}
               </option>
             ))}
           </select>

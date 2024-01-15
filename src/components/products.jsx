@@ -33,7 +33,7 @@ const Products = () => {
           className="flex transition-transform duration-1000 "
           style={{
             transform: `translateX(${
-              currentPage * (((itemsPerPage * 4) / 10) * itemsPerPage)
+              currentPage * (((itemsPerPage * 4) / 100) * itemsPerPage)
             }%)`,
           }}
         >

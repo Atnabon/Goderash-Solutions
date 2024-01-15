@@ -6,7 +6,7 @@ import styles from "@/style";
 import Products from "./products";
 import Sub from "./Sub";
 import Team from "./Team";
-import CTA from "./CTA";
+// import CTA from "./CTA";
 import Footer from "./Footer";
 
 const Homepage = () => {
@@ -21,7 +21,7 @@ const Homepage = () => {
           <Team />
           <Sub />
           <Business />
-          <CTA />
+          {/* <CTA /> */}
           <Testimonials />
         </div>
       </div>

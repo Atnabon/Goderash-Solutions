@@ -165,7 +165,7 @@ export const services = [
       "Money is only a tool. It will take you wherever you wish, but it will .",
     name: "Fuel...1",
     title: "Money is only a tool. It will take you wherever you wish, but it.",
-    img: fuel,
+    img: insurance,
   },
   {
     id: "services_2",
@@ -206,7 +206,7 @@ export const services = [
   {
     id: "services_5",
     content:
-      "It is usually people in the money business, finance, and eally rich.",
+      "It is usually people in the money business, finance, and eally rich. It is usually people in the money business, finance, and eally rich.It is usually people in the money business, finance, and eally rich.",
     name: "Car Wah...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not .",
@@ -230,16 +230,6 @@ export const services = [
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not",
     img: oil,
-  },
-
-  {
-    id: "services_8",
-    content:
-      "It is usually people in the money business, finance, and eally rich.",
-    name: "car Wash...!",
-    title:
-      "Money is only a tool. It will take you wherever you wish, but it will not ",
-    img: a,
   },
 ];
 

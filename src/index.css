@@ -173,3 +173,16 @@
 .animate-slide-right {
   animation: slideRight 10s linear infinite; /* You can adjust the duration and timing function as needed */
 }
+
+@keyframes slideInfinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-infinite {
+  animation: slideInfinite 600s linear infinite; /* Adjust the duration as needed */
+}

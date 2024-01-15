@@ -13,7 +13,7 @@ const Products = () => {
       setCurrentPage(
         (prevPage) => (prevPage + 1) % Math.ceil(services.length / itemsPerPage)
       );
-    }, 3000); // 10 seconds in milliseconds
+    }, 10000); // 10 seconds in milliseconds
 
     return () => clearInterval(intervalId);
   }, [currentPage]);
@@ -28,11 +28,13 @@ const Products = () => {
           Go Derash Services <br className="sm:block hidden font-sans w-full" />
         </h2>
       </div>
-      <div className="flex relative z-[10] overflow-hidden">
+      <div className="flex relative z-[10] ">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-1000 "
           style={{
-            transform: `translateX(${currentPage * (5 / itemsPerPage)}%)`,
+            transform: `translateX(${
+              currentPage * (((itemsPerPage * 4) / 10) * itemsPerPage)
+            }%)`,
           }}
         >
           {services
@@ -40,7 +42,7 @@ const Products = () => {
             .map((card) => (
               <div
                 key={card.id}
-                className="w-full sm:w-1 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4"
+                className="w-full sm:w-1 md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 duration-1000"
               >
                 <Services {...card} />
               </div>

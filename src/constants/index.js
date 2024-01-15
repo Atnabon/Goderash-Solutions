@@ -14,6 +14,7 @@ import {
   oil,
   fuel3,
   insurance,
+  fuel2,
 } from "../assets";
 import { GiCarWheel } from "react-icons/gi";
 import { MdElectricCar } from "react-icons/md";
@@ -162,7 +163,7 @@ export const services = [
     id: "services_1",
     content:
       "Money is only a tool. It will take you wherever you wish, but it will .",
-    name: "Fuel...!",
+    name: "Fuel...1",
     title: "Money is only a tool. It will take you wherever you wish, but it.",
     img: fuel,
   },
@@ -170,7 +171,7 @@ export const services = [
     id: "services_2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Tyre...!",
+    name: "Tyre...2",
     title: "Money is only a tool. It will take you wherever you wish, .",
     img: insurance,
   },
@@ -178,19 +179,19 @@ export const services = [
     id: "services_2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Tyre...!",
+    name: "Tyre...3",
     title: "Money is only a tool. It will take you wherever you wish, .",
-    img: insurance,
+    img: tanker,
   },
 
   {
     id: "services_3",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Trye...!",
+    name: "Trye...4",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will.",
-    img: insurance,
+    img: fuel3,
   },
 
   {
@@ -209,14 +210,14 @@ export const services = [
     name: "Car Wah...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not .",
-    img: insurance,
+    img: fuel2,
   },
 
   {
     id: "services_6",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "IFuel",
+    name: "Fuel...6",
     title: "Money is only a tool. It will take you wherever you wish, .",
     img: tanker,
   },
@@ -225,7 +226,7 @@ export const services = [
     id: "services_7",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Fuel ...!",
+    name: "Fuel ...5",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not",
     img: oil,
@@ -238,7 +239,7 @@ export const services = [
     name: "car Wash...!",
     title:
       "Money is only a tool. It will take you wherever you wish, but it will not ",
-    img: fuel,
+    img: a,
   },
 ];
 

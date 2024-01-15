@@ -2,10 +2,11 @@ import b from "../assets/b.png";
 import styles from "../style";
 import { show, rote } from "../assets";
 import Fuel1 from "./Fuel1";
+import Footer from "@/components/Footer";
 
 const EngineOil = () => {
   return (
-    <div className=" bg-[#011730] overflow-hidden">
+    <div className="bg-white overflow-hidden">
       <div className="relative bg-[#011730] overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -46,6 +47,10 @@ const EngineOil = () => {
         </div>
       </div>
       <Fuel1 />
+      <div className="mt-24">
+        {" "}
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { show, rote, c1, c2 } from "../assets";
 import Fuel1 from "./Fuel1";
 import Fuel2 from "./Fuel2";
 import Fuel3 from "./Fuel3";
+import Footer from "@/components/Footer";
 
 export default function Fuel() {
   return (
@@ -88,6 +89,10 @@ export default function Fuel() {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mt-24">
+        {" "}
+        <Footer />
       </div>
     </div>
   );

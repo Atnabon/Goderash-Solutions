@@ -3,10 +3,11 @@ import b from "../assets/b.png";
 import styles from "../style";
 import { show, rote } from "../assets";
 import Fuel1 from "./Fuel1";
+import Footer from "@/components/Footer";
 
 const Emergance = () => {
   return (
-    <div className=" bg-[#011730] overflow-hidden">
+    <div className="bg-white overflow-hidden">
       <div className="relative bg-[#011730] overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -47,6 +48,9 @@ const Emergance = () => {
         </div>
       </div>
       <Fuel1 />
+      <div className=" mt-14">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -37,10 +37,12 @@ import car from "./car.png";
 import fuel2 from "./fuel2.png";
 import fuel3 from "./fuel3.jpg";
 import call from "./call.png";
-// import tyre from "./tyre.jpg";
+import tyre1 from "./tyre1.jpg";
+import tyre2 from "./tyre2.jpg";
 
 export {
-  // tyre,
+  tyre2,
+  tyre1,
   call,
   fuel3,
   fuel2,

@@ -163,8 +163,9 @@ export const services = [
     id: "services_1",
     content:
       "Money is only a tool. It will take you wherever you wish, but it will .",
-    name: "Fuel...1",
-    title: "Money is only a tool. It will take you wherever you wish, but it.",
+    name: "Fuel",
+    title:
+      "Experience the convenience of our reliable Fuel Delivery service, tailored to meet your on-the-go lifestyle. Say goodbye to fuel station hassles and let us bring the pump to you. ",
     img: insurance,
   },
   {

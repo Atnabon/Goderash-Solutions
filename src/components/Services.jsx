@@ -1,20 +1,21 @@
 import React from "react";
-import styles from "./Services.module.css";
 
 const Services = ({ name, title, img }) => {
   return (
-    <div className="relative flex items-center justify-center hover:shadow-2xl">
+    <div className="relative flex items-center justify-center h-auto hover:shadow-2xl">
       <div className="flex flex-wrap grid-cols-3 md:flex-row items-center h-96 w-80 justify-center">
-        <div className="flex flex-col">
+        <div className="flex flex-col w-auto h-auto ">
           <div
-            className={`absolute inset-1 font-sans sm:block hidden border-1 shadow-md shadow-white w-full h-full items-center justify-center text-white py-4 px-6 rounded-[20px] ${styles.overlay} transition-all`}
+            className={` font-sans border-1 shadow-md shadow-white  items-center justify-center text-white py-4 px-6 rounded-[20px] `}
           >
             <img
               src={img}
               alt={name}
-              className={`w-[80%] h-[60%] md:w-[50%] ml-16 mb-10 md:h-auto md:mb-0 md:mr-4 rounded-[20px] ${styles.image} transition-transform transform hover:scale-105`}
+              className={`w-[80%] h-[60%] md:w-[50%] ml-16 mb-10 md:h-auto md:mb-0 md:mr-4 rounded-[20px]`}
             />
-            <h1 className="mt-11 leading-6 font-medium font">{title}</h1>
+            <div>
+              <p className="mt-11 leading-6  ">{title}</p>
+            </div>
             <h1 className="mt-11 leading-6 font-medium text-2xl">{name}</h1>
           </div>
         </div>

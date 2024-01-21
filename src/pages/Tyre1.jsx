@@ -10,7 +10,7 @@ const Tyre1 = () => {
           <span className="text-black">in Ethiopia...!</span>
         </h2>
         <div className="text-black    ">
-          <p className=" leading-6 font-poppins  ">
+          <p className=" font-serif text-lg font-normal leading-7 ">
             Your tyres are the key to safe driving – they’re literally the link
             between your car and the road.
             <br /> That’s why it’s essential to keep them in good condition, and

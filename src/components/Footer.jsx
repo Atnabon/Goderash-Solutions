@@ -40,21 +40,7 @@ export default function Footer() {
               <PhoneIcon className="h-6 w-6 mr-2" />
               <span>994</span>
             </div>
-            <div className="mb-4">
-              <h3 className="font-bold text-lg">
-                Be the first to hear our news
-              </h3>
-              <div className="flex mt-2">
-                <input
-                  className="p-2 mr-2 flex-1"
-                  placeholder="Email address"
-                  type="email"
-                />
-                <Button>Sign up</Button>
-              </div>
-            </div>
           </div>
-          {/* <div className="absolute z-[0] w-[100%] h-[100%] mt-72 rounded-full blue__gradient bottom-40" /> */}
         </div>
         <div className="flex justify-between items-center mt-6  border-t-2 border-white pt-4">
           <span>© 2023 Goderash. All Rights Reserved</span>

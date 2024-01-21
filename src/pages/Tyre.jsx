@@ -7,7 +7,6 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Tyre1 from "./Tyre1";
 import Tyre2 from "./Tyre2";
-import Tyre3 from "./Tyre3";
 
 const Tyre = () => {
   const history = useNavigate();

@@ -48,8 +48,45 @@ const CarWash = () => {
         </div>
       </div>
       <Fuel1 />
-      <div className="mt-24">
-        <Footer />{" "}
+      <h1 className="text-6xl w-screen ml-12    mt-10 text-secondary font-extrabold">
+        Select Your Fuel Types
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mt-14 mx-5">
+        {services.map((service) => (
+          <Link
+            key={service.id}
+            to={`/${service.slug}`}
+            className="flex flex-col items-center justify-center text-black"
+          >
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform transform hover:scale-105">
+              {service.image && (
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-40 object-cover mb-4 rounded-md"
+                />
+              )}
+              <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="flex items-center justify-between w-full">
+                <span className="text-lg font-bold text-black">
+                  Price: {service.price}
+                </span>
+              </div>
+              <Button
+                onClick={() => handleOrderClick(service.slug)}
+                className="bg-lime-500 hover:bg-lime-600 text-white px-4 py-2 rounded-full shadow-md focus:outline-none focus:ring focus:border-blue-300 transition-all duration-300 ease-in-out"
+              >
+                Place Order
+              </Button>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <div className=" mt-24">
+        {" "}
+        <Footer />
       </div>
     </div>
   );

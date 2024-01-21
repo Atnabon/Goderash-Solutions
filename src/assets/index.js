@@ -48,7 +48,9 @@ import oil from "./oil.png";
 import oil2 from "./oil2.jpg";
 import emragence from "./emragence.png";
 import place from "./place.jpg";
+import tya1 from "./tya1.jpg";
 export {
+  tya1,
   place,
   emragence,
   oil2,

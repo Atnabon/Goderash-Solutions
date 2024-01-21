@@ -22,7 +22,7 @@ function Sub() {
         <Card className="w-full  font-sans md:w-[350px] mt-3 bg-[#011730] hover:shadow-md hover:bg-current hover:border-rose-50 hover:border-x-green-900 hover:-shadow-xl hover:border-y-sky-600">
           <CardHeader>
             <CardTitle className="text-white leading-6 font-medium font-sans">
-              Pro...!{" "}
+              Pro{" "}
             </CardTitle>
             <CardDescription className="text-xl text-white  font-sans">
               2000 /months
@@ -33,10 +33,18 @@ function Sub() {
           </CardHeader>
           <CardContent>
             <ul className="list-inside text-white leading-6 font-medium  font-sans list-disc space-y-2 mb-4">
-              <li>For CarS</li>
-              <li>For Motors</li>
-              <li>For Homes </li>
-              <li>For all vehicles </li>
+              <li className=" text-left ">
+                For Cars
+                <p className=" ml-10 font-normal">
+                  Enjoy the luxury of a hassle-free automotive experience with
+                  our car subscription services. Gain access to a fleet of
+                  vehicles, switch between models, and drive the latest rides
+                  without the burden of ownership.
+                </p>
+              </li>
+              <li>For Home</li>
+              <li>For Your Company</li>
+              <li>For Life</li>
             </ul>
           </CardContent>
           <CardFooter className="flex justify-center">
@@ -49,7 +57,7 @@ function Sub() {
         </Card>
         <Card className="w-full md:w-[350px] bg-[#011730] hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">
           <CardHeader>
-            <CardTitle className="text-white  font-sans">Pro...!</CardTitle>
+            <CardTitle className="text-white  font-sans">Pro</CardTitle>
             <CardDescription className="text-xl leading-6 font-medium font-sans text-white">
               20000 /month
             </CardDescription>
@@ -59,7 +67,15 @@ function Sub() {
           </CardHeader>
           <CardContent>
             <ul className="list-inside list-disc leading-6 font-medium text-white space-y-2 mb-4">
-              <li>For Cars</li>
+              <li className=" text-left ">
+                For Cars
+                <p className=" ml-10 font-normal">
+                  Enjoy the luxury of a hassle-free automotive experience with
+                  our car subscription services. Gain access to a fleet of
+                  vehicles, switch between models, and drive the latest rides
+                  without the burden of ownership.
+                </p>
+              </li>
               <li>For Home</li>
               <li>For Your Company</li>
               <li>For Life</li>
@@ -73,7 +89,7 @@ function Sub() {
         </Card>
         <Card className=" w-full md:w-[350px] bg-[#011730] hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
           <CardHeader>
-            <CardTitle className="text-white">Pro...!</CardTitle>
+            <CardTitle className="text-white">Pro</CardTitle>
             <CardDescription className="text-xl text-white">
               24,000 /month
             </CardDescription>
@@ -83,10 +99,18 @@ function Sub() {
           </CardHeader>
           <CardContent>
             <ul className="list-inside list-disc leading-6 font-medium text-white space-y-2 mb-4">
-              <li>For Cars</li>
-              <li>For Cars</li>
-              <li>For Cars</li>
-              <li>For Cars</li>
+              <li className=" text-left ">
+                For Cars
+                <p className=" ml-10 font-normal">
+                  Enjoy the luxury of a hassle-free automotive experience with
+                  our car subscription services. Gain access to a fleet of
+                  vehicles, switch between models, and drive the latest rides
+                  without the burden of ownership.
+                </p>
+              </li>
+              <li>For Home</li>
+              <li>For Your Company</li>
+              <li>For Life</li>
             </ul>
           </CardContent>
           <CardFooter className="flex justify-center">

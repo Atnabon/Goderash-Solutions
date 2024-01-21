@@ -1,5 +1,5 @@
 import styles from "../style";
-import { FuelDelivery, imagefuely } from "../assets";
+import { FuelDelivery, imagefuely, tya1 } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,8 +28,8 @@ const Tyre2 = () => {
 
         <img
           alt="Background"
-          className="w-full md:w-[50%] lg:w-[450px] h-[400px] md:mr-20 md:ml-4 z-[1000] overflow-visible  sm:block hidden -translate-x-44"
-          src={FuelDelivery}
+          className="w-full md:w-[50%] lg:w-[450px] h-[400px] md:mr-20 md:ml-4 z-[1000] overflow-visible border-8 rounded-md  sm:block hidden -translate-x-44"
+          src={tya1}
         />
       </div>
       <div className="w-full md:w-[50%] lg:w-[50%] bg-gray-100 -translate-x-44">

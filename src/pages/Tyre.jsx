@@ -117,7 +117,7 @@ const Tyre = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-6xl w-screen ml-12    mt-10 text-black font-extrabold">
+      <h1 className="text-6xl w-screen ml-12    mt-10 text-secondary font-extrabold">
         Select Your Tyre Brand
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mt-14 mx-5">

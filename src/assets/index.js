@@ -49,7 +49,19 @@ import oil2 from "./oil2.jpg";
 import emragence from "./emragence.png";
 import place from "./place.jpg";
 import tya1 from "./tya1.jpg";
+import tya from "./tya.jpg";
+import carwash3 from "./carwash3.jpg";
+import carwash4 from "./carwash4.jpg";
+import carwash5 from "./carwash5.jpg";
+import carwash6 from "./carwash6.jpg";
+import carwash7 from "./carwash7.webp";
 export {
+  tya,
+  carwash7,
+  carwash6,
+  carwash5,
+  carwash4,
+  carwash3,
   tya1,
   place,
   emragence,

@@ -4,8 +4,41 @@ import styles from "../style";
 import { show, rote } from "../assets";
 import Fuel1 from "./Fuel1";
 import Footer from "@/components/Footer";
+import { useNavigate, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Carwash1 from "./Carwash1";
+import Carwash2 from "./Carwash2";
+import Carwash3 from "./CarWash3";
+import Carwash4 from "./Carwash4";
+import Carwash5 from "./Carwash5";
+import Carwash6 from "./Carwash6";
+import Carwash7 from "./Carwash7";
+import Carwash8 from "./Carwash8";
 
 const CarWash = () => {
+  const history = useNavigate();
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/tyre/user/tyre/listtyrecategory/"
+        );
+        const data = await response.json();
+        setServices(data);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      }
+    };
+    console.log("Image URL:", services.image);
+
+    fetchServices();
+  }, []);
+
+  const handleOrderClick = (serviceSlug) => {
+    history(`/order/${serviceSlug}`);
+  };
   return (
     <div className="bg-white overflow-hidden">
       <div className="relative bg-[#011730] overflow-hidden">
@@ -47,11 +80,22 @@ const CarWash = () => {
           </main>
         </div>
       </div>
-      <Fuel1 />
-      <h1 className="text-6xl w-screen ml-12    mt-10 text-secondary font-extrabold">
+      <Carwash1 />
+      <Carwash2 />
+      <Carwash3 />
+      <div className="">
+        {" "}
+        <Carwash4 />
+      </div>
+      <Carwash5 />
+      <Carwash6 />
+      <Carwash7 />
+      <Carwash8 />
+
+      <h1 className="text-6xl w-screen ml-12 lg:-translate-y-80   text-secondary font-extrabold">
         Select Your Fuel Types
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mt-14 mx-5">
+      <div className="grid grid-cols-1 lg:-translate-y-80 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 mt-14 mx-5">
         {services.map((service) => (
           <Link
             key={service.id}
@@ -84,7 +128,7 @@ const CarWash = () => {
         ))}
       </div>
 
-      <div className=" mt-24">
+      <div className=" ">
         {" "}
         <Footer />
       </div>

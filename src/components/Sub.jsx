@@ -15,7 +15,7 @@ function Sub() {
       <h2 className="text-center leading-6 text-4xl font-sans font-bold mb-6">
         Subscriptions For More
       </h2>
-      <p className="text-center leading-6 font-medium   text-lg mb-10">
+      <p className="text-center leading-6 font-medium text-lg mb-10">
         Choose the right pricing for you and get started working on your project
       </p>
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4">

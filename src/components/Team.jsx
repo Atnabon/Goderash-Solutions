@@ -12,7 +12,7 @@ import {
 
 const Team = () => {
   return (
-    <div className=" h-auto sm:block hidden justify-center leading-6 text-basess font-medium  items-center">
+    <div className=" sm:block hidden justify-center leading-6 font-medium  items-center">
       <div className="flex w-full ml-16 mt-16 bg-secondary py-1  "></div>
 
       <div className="flex flex-col rounded-e-sm gap-4 mr-auto md:flex-row space-y-5 md:space-y-0 md:space-x-8 mx-4 md:mx-8 lg:mx-16">
@@ -28,45 +28,52 @@ const Team = () => {
               <CardHeader>
                 <CardTitle className="text-white">Our Goal </CardTitle>
               </CardHeader>
-              <CardContent className="text-white w-auto  leading-6 font-medium ">
-                <span className=" font-bold text-gradient text-lg leading-6 ">
+              <CardContent className="text-white font-sans">
+                <p className="font-bold text-gradient text-lg leading-6">
                   Customer Satisfaction:
-                </span>{" "}
-                Achieve a customer satisfaction rating of 95% or higher through
-                personalized and efficient services.
-                <br />
-                <span className=" font-bold text-gradient  leading-6  ">
-                  Innovation:
-                </span>{" "}
-                Introduce at least two new innovative services or products
-                annually to stay ahead of industry trends.
-                <br />
-                <span className="font-bold text-gradient  leading-6 ">
-                  Leadership:
-                </span>{" "}
-                Become the market leader in our region for comprehensive car
-                services within the next three years.
-                <br />
-                <span className=" font-bold  text-gradient t leading-6 ">
+                </p>
+                <p>
+                  Achieve a customer satisfaction rating of 95% or higher
+                  through personalized and efficient services.
+                </p>
+
+                <p className="font-bold text-gradient leading-6">Innovation:</p>
+                <p>
+                  Introduce at least two new innovative services or products
+                  annually to stay ahead of industry trends.
+                </p>
+
+                <p className="font-bold text-gradient leading-6">Leadership:</p>
+                <p>
+                  Become the market leader in our region for comprehensive car
+                  services within the next three years.
+                </p>
+
+                <p className="font-bold text-gradient leading-6">
                   Environmental Sustainability:
-                </span>{" "}
-                Implement eco-friendly practices in all aspects of our
-                operations, aiming to reduce our carbon footprint by 20% within
-                the next two years.
-                <br />
-                <span className=" font-bold text-gradient text-lg leading-6 ">
+                </p>
+                <p>
+                  Implement eco-friendly practices in all aspects of our
+                  operations, aiming to reduce our carbon footprint by 20%
+                  within the next two years.
+                </p>
+
+                <p className="font-bold text-gradient text-lg leading-6">
                   Employee Engagement:
-                </span>{" "}
-                Foster a positive and collaborative work culture, aiming for an
-                employee satisfaction rate of 90% or higher.
-                <br />
-                <span className="font-bold text-gradient text-lg leading-6 ">
-                  Community Impact:{" "}
-                </span>{" "}
-                Actively engage in community initiatives related to road safety,
-                environmental awareness, and social responsibility.
+                </p>
+                <p>
+                  Foster a positive and collaborative work culture, aiming for
+                  an employee satisfaction rate of 90% or higher.
+                </p>
+
+                <p className="font-bold text-gradient text-lg leading-6">
+                  Community Impact:
+                </p>
+                <p>
+                  Actively engage in community initiatives related to road
+                  safety, environmental awareness, and social responsibility.
+                </p>
               </CardContent>
-              <br />
             </Card>
           </div>
         </div>
@@ -81,17 +88,20 @@ const Team = () => {
             <Card className=" w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
               <CardHeader>
                 <CardTitle className="text-white leading-6 font-medium">
-                  Mission
+                  Mision
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-white ">
-                {" "}
-                "Our mission is to enhance the driving experience by offering a
-                one-stop-shop for all car-related needs. We strive to provide
-                high-quality fuel services, tire care, car wash, insurance,
-                battery replacements, and vehicle sales with a commitment to
-                excellence, environmental responsibility, and customer
-                satisfaction."
+              <CardContent className="text-white font-sans">
+                <p>
+                  Our mission is to redefine the driving experience by
+                  establishing a comprehensive one-stop-shop for all automotive
+                  needs. At Goderash, we take pride in delivering exceptional
+                  services, including high-quality fuel provisions, meticulous
+                  tire care, thorough car wash services, reliable insurance
+                  options, expert battery replacements, and seamless vehicle
+                  sales. Our commitment extends beyond the ordinary—aiming for
+                  excellence in every facet of our operations.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -106,13 +116,18 @@ const Team = () => {
           <div className="flex flex-col mt-2 ml-10  md:flex-row justify-center space-y-4 md:space-x-4">
             <Card className="w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">
               <CardHeader>
-                <CardTitle className="text-white">Vision</CardTitle>
+                <CardTitle className="text-white">Vision!</CardTitle>
               </CardHeader>
               <CardContent className="text-white ">
-                {" "}
-                "To be the leading provider of comprehensive and innovative car
-                services, revolutionizing the automotive industry through
-                sustainable and customer-centric solutions."
+                <p>
+                  To emerge as the premier provider of comprehensive and
+                  innovative car services, we aspire to revolutionize the
+                  automotive industry through sustainable and customer-centric
+                  solutions. Our commitment extends beyond conventional service
+                  models, aiming to set new standards that prioritize
+                  environmental responsibility, cutting-edge innovation, and a
+                  relentless focus on customer satisfaction.
+                </p>
               </CardContent>
             </Card>
           </div>

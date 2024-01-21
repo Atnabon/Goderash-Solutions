@@ -1,4 +1,3 @@
-
 const Fuel1 = () => {
   return (
     <div className="w-screen h-screen min-h-full lg:h-full bg-white text-black flex ">

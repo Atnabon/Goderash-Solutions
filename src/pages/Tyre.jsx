@@ -1,11 +1,13 @@
 import b from "../assets/b.png";
 import styles from "../style";
-import { show, rote } from "../assets";
-import Fuel1 from "./Fuel1";
+import { show, rote, c1, c2 } from "../assets";
 import Footer from "@/components/Footer";
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import Tyre1 from "./Tyre1";
+import Tyre2 from "./Tyre2";
+import Tyre3 from "./Tyre3";
 
 const Tyre = () => {
   const history = useNavigate();
@@ -73,7 +75,52 @@ const Tyre = () => {
           </main>
         </div>
       </div>
-      <Fuel1 />
+
+      <Tyre1 />
+      <Tyre2 />
+      <div className="w-full space-y-10 md:space-x-10 md:flex md:items-start md:justify-start">
+        <div className="w-full md:w-1/2 mt-10 md:ml-1 lg:ml-9 sm:ml-3 md:mr-5 lg:mr-3">
+          <h1 className="text-4xl font-extrabold text-black mt-12  w-screen">
+            Get ready for your tyres
+          </h1>
+          <img
+            src={c1}
+            alt="arrow-up"
+            className="w-full h-auto object-cover -translate-x-3"
+          />
+          <div className="mt-5">
+            <h1 className="font-poppins text-2xl md:text-4xl leading-[26.58px] text-slate-900 font-extrabold">
+              Park safely
+            </h1>
+            <p className="mt-4 font-serif text-base mt-10">
+              We can only make fuel deliveries to vehicles parked outdoors.
+              Please make sure that you’re safely parked, and that your fuel cap
+              is unlocked and accessible.
+            </p>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 mt-20">
+          <img
+            src={c2}
+            alt="arrow-up"
+            className="w-full h-auto object-cover -translate-x-9"
+          />
+          <div className="mt-4">
+            <h1 className="font-poppins text-2xl md:text-4xl leading-[26.58px] text-slate-900 font-extrabold">
+              Stay close
+            </h1>
+            <p className="mt-4 font-serif text-base">
+              Don’t worry – it’s completely safe to leave your fuel cap unlocked
+              (and there’s no need to leave your doors unlocked). In fact, many
+              manufacturers now fit fuel caps that can’t be locked.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="mt-24">
+        {" "}
+        <Footer />
+      </div>
       <h1 className="text-6xl w-screen ml-12    mt-10 text-black font-extrabold">
         Select Your Tyre Brand
       </h1>

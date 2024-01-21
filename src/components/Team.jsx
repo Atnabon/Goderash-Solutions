@@ -12,7 +12,7 @@ import {
 
 const Team = () => {
   return (
-    <div className=" h-screen sm:block hidden justify-center  items-center">
+    <div className=" h-auto sm:block hidden justify-center leading-6 text-basess font-medium  items-center">
       <div className="flex w-full ml-16 mt-16 bg-secondary py-1  "></div>
 
       <div className="flex flex-col rounded-e-sm gap-4 mr-auto md:flex-row space-y-5 md:space-y-0 md:space-x-8 mx-4 md:mx-8 lg:mx-16">
@@ -28,12 +28,45 @@ const Team = () => {
               <CardHeader>
                 <CardTitle className="text-white">Our Goal </CardTitle>
               </CardHeader>
-              <CardContent className="text-white font-sans">
-                This is Go Derash Come on...! This is Go Derash Come on...! This
-                is Go Derash Come on...! This is Go Derash Come on...! This is
-                Go Derash Come on...! This is Go Derash Come on...! This is Go
-                Derash Come on...! This is Go Derash Come on...!
+              <CardContent className="text-white w-auto  leading-6 font-medium ">
+                <span className=" font-bold text-gradient text-lg leading-6 ">
+                  Customer Satisfaction:
+                </span>{" "}
+                Achieve a customer satisfaction rating of 95% or higher through
+                personalized and efficient services.
+                <br />
+                <span className=" font-bold text-gradient  leading-6  ">
+                  Innovation:
+                </span>{" "}
+                Introduce at least two new innovative services or products
+                annually to stay ahead of industry trends.
+                <br />
+                <span className="font-bold text-gradient  leading-6 ">
+                  Leadership:
+                </span>{" "}
+                Become the market leader in our region for comprehensive car
+                services within the next three years.
+                <br />
+                <span className=" font-bold  text-gradient t leading-6 ">
+                  Environmental Sustainability:
+                </span>{" "}
+                Implement eco-friendly practices in all aspects of our
+                operations, aiming to reduce our carbon footprint by 20% within
+                the next two years.
+                <br />
+                <span className=" font-bold text-gradient text-lg leading-6 ">
+                  Employee Engagement:
+                </span>{" "}
+                Foster a positive and collaborative work culture, aiming for an
+                employee satisfaction rate of 90% or higher.
+                <br />
+                <span className="font-bold text-gradient text-lg leading-6 ">
+                  Community Impact:{" "}
+                </span>{" "}
+                Actively engage in community initiatives related to road safety,
+                environmental awareness, and social responsibility.
               </CardContent>
+              <br />
             </Card>
           </div>
         </div>
@@ -47,14 +80,18 @@ const Team = () => {
           <div className="flex flex-col md:flex-row mt-2 justify-center space-y-4 md:space-x-4">
             <Card className=" w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-yellow-900">
               <CardHeader>
-                <CardTitle className="text-white">M...!</CardTitle>
+                <CardTitle className="text-white leading-6 font-medium">
+                  Mission
+                </CardTitle>
               </CardHeader>
               <CardContent className="text-white ">
                 {" "}
-                This is Go Derash Come on...! This is Go Derash Come on...! This
-                is Go Derash Come on...! This is Go Derash Come on...! This is
-                Go Derash Come on...! This is Go Derash Come on...! This is Go
-                Derash Come on...! This is Go Derash Come on...!
+                "Our mission is to enhance the driving experience by offering a
+                one-stop-shop for all car-related needs. We strive to provide
+                high-quality fuel services, tire care, car wash, insurance,
+                battery replacements, and vehicle sales with a commitment to
+                excellence, environmental responsibility, and customer
+                satisfaction."
               </CardContent>
             </Card>
           </div>
@@ -69,14 +106,13 @@ const Team = () => {
           <div className="flex flex-col mt-2 ml-10  md:flex-row justify-center space-y-4 md:space-x-4">
             <Card className="w-full md:w-[350px] bg-[#011730]  hover:shadow-md hover:bg-current  hover:border-rose-500 hover:border-x-green-400 hover:border-shadow-xl hover:border-y-blue-700">
               <CardHeader>
-                <CardTitle className="text-white">V...!</CardTitle>
+                <CardTitle className="text-white">Vision</CardTitle>
               </CardHeader>
               <CardContent className="text-white ">
                 {" "}
-                This is Go Derash Come on...! This is Go Derash Come on...! This
-                is Go Derash Come on...! This is Go Derash Come on...! This is
-                Go Derash Come on...! This is Go Derash Come on...! This is Go
-                Derash Come on...! This is Go Derash Come on...!
+                "To be the leading provider of comprehensive and innovative car
+                services, revolutionizing the automotive industry through
+                sustainable and customer-centric solutions."
               </CardContent>
             </Card>
           </div>

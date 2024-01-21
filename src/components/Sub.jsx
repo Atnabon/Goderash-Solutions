@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 function Sub() {
   return (
-    <div className="bg-[#011730] text-white font-sans   ">
+    <div className="bg-[#011730] text-white font-sans mt-10   ">
       <h2 className="text-center leading-6 text-4xl font-sans font-bold mb-6">
         Subscriptions For More
       </h2>

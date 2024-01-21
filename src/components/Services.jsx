@@ -14,8 +14,8 @@ const Services = ({ name, title, img }) => {
               alt={name}
               className={`w-[80%] h-[60%] md:w-[50%] ml-16 mb-10 md:h-auto md:mb-0 md:mr-4 rounded-[20px] ${styles.image} transition-transform transform hover:scale-105`}
             />
-            <h1 className="mt-11 font">{title}</h1>
-            <h1 className="mt-11 text-2xl">{name}</h1>
+            <h1 className="mt-11 leading-6 font-medium font">{title}</h1>
+            <h1 className="mt-11 leading-6 font-medium text-2xl">{name}</h1>
           </div>
         </div>
       </div>

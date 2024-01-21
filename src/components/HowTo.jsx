@@ -1,7 +1,7 @@
 import styles from "../style";
 export default function HowTo() {
   return (
-    <div className="flex justify-center font-sans items-center py-16 ">
+    <div className="flex justify-center  items-center py-16 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold  text-center  text-white  mb-16">
           It’s As Easy As 1- 2 - GODERASH{" "}
@@ -12,7 +12,7 @@ export default function HowTo() {
             <h3 className="mt-5 text-lg leading-6 font-medium text-gradient">
               Get the app
             </h3>
-            <p className="mt-2 text-base text-white">
+            <p className="mt-2 leading-6 font-medium text-white">
               Download the app and start saving time with Goderash.
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function HowTo() {
             <h3 className="mt-5 text-lg leading-6 font-medium text-gradient">
               Book and checkout
             </h3>
-            <p className="mt-2 text-base text-white">
+            <p className="mt-2 text-base leading-6 font-medium text-white">
               Open the app, anytime. Order and pay for a fuel delivery, car
               wash, oil or tyre change, or battery service.
             </p>
@@ -31,7 +31,7 @@ export default function HowTo() {
             <h3 className="mt-5 text-lg leading-6 font-medium text-gradient">
               Get your car ready
             </h3>
-            <p className="mt-2 text-base text-white">
+            <p className="mt-2 text-base leading-6 font-medium text-white">
               Make sure your car is easily accessible (and don’t forget to open
               your fuel cap if you’ve ordered a fuel delivery).
             </p>
@@ -41,7 +41,7 @@ export default function HowTo() {
             <h3 className="mt-5 text-lg leading-6 font-medium text-gradient">
               You’re all set
             </h3>
-            <p className="mt-2 text-base text-white">
+            <p className="mt-2 text-base leading-6 font-medium text-white">
               And we’re on our way. No queues, no hassle. Simpler. Smarter.
               Goderash.
             </p>

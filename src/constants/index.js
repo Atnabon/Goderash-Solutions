@@ -15,6 +15,16 @@ import {
   fuel3,
   insurance,
   fuel2,
+  tyre1,
+  tyre2,
+  R,
+  r2,
+  r3,
+  carwash1,
+  carwa,
+  oil2,
+  emragence,
+  place,
 } from "../assets";
 import { GiCarWheel } from "react-icons/gi";
 import { MdElectricCar } from "react-icons/md";
@@ -165,72 +175,75 @@ export const services = [
       "Money is only a tool. It will take you wherever you wish, but it will .",
     name: "Fuel",
     title:
-      "Experience the convenience of our reliable Fuel Delivery service, tailored to meet your on-the-go lifestyle. Say goodbye to fuel station hassles and let us bring the pump to you. ",
-    img: insurance,
+      "Experience the convenience of our reliable Fuel Delivery service, tailored to meet your on-the-go lifestyle. Say goodbye to fuel station hassles and let us bring the pump to you. Whether you're stuck on the side of the road, running late, or simply prefer the ease of at-home refueling, our prompt and efficient Fuel Delivery service ensures you stay fueled and ready for your journey. Enjoy peace of mind knowing that convenience is just a call away ",
+    img: splah,
   },
   {
     id: "services_2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: "Tyre...2",
-    title: "Money is only a tool. It will take you wherever you wish, .",
-    img: insurance,
+    title:
+      "Transform your driving experience with our premium All-Season Performance Tires. Meticulously engineered for year-round excellence, these tires strike a perfect harmony between comfort, precise handling, and extended longevity. Whether navigating city streets or conquering diverse terrains, embrace the road with confidence, knowing that our high-performance tires deliver an unparalleled driving experience. Enjoy peace of mind with Goderash",
+    img: r3,
   },
   {
     id: "services_2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Tyre...3",
-    title: "Money is only a tool. It will take you wherever you wish, .",
-    img: tanker,
+    name: "battery",
+    title:
+      "Energize your vehicle with our top-tier Battery Services. Carefully curated for year-round reliability, these services seamlessly balance performance, durability, and efficiency. Whether cruising through urban landscapes or embarking on off-road adventures, entrust your journey to our expert battery services. comes with Goderash expertise, ensuring your vehicle's power source is optimized for a consistently reliable driving experience.",
+    img: carwash1,
   },
 
   {
     id: "services_3",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Trye...4",
+    name: "car wash",
     title:
-      "Money is only a tool. It will take you wherever you wish, but it will.",
-    img: fuel3,
+      "Elevate your vehicle's appearance with our meticulous Car Wash services. Indulge in a spa day for your car as our skilled team pampers it to a showroom shine. Using advanced cleaning techniques and premium products, we remove dirt, grime, and road debris, leaving your vehicle glistening and refreshed. Our commitment to quality extends to every nook and cranny, ensuring a spotless finish that not only enhances your car's aesthetic but also protects its paint.",
+    img: carwa,
   },
 
   {
     id: "services_4",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: " battery",
+    name: " Engine oil",
     title:
-      "Money is only a tool. It will take you wherever you wish, but it will.",
-    img: fuel3,
+      "Revitalize your engine's performance with our premium Engine Oil solutions. Specially formulated for optimal lubrication and protection, our high-quality engine oils are designed to enhance efficiency, reduce friction, and extend the life of your vehicle's powerplant. Whether you're embarking on a daily commute or gearing up for a long journey, trust in our advanced engine oil to safeguard against wear and tear, engine cleanliness, and promote performance.",
+    img: oil2,
   },
   {
     id: "services_5",
     content:
       "It is usually people in the money business, finance, and eally rich. It is usually people in the money business, finance, and eally rich.It is usually people in the money business, finance, and eally rich.",
-    name: "Car Wah...!",
+    name: "Insurance",
     title:
-      "Money is only a tool. It will take you wherever you wish, but it will not .",
-    img: fuel2,
+      "Safeguard your journey with our comprehensive Insurance solutions. We understand that peace of mind is paramount when it comes to protecting your vehicle. Our tailored insurance plans provide a robust shield against unexpected events, covering everything from accidents to theft and natural disasters. With a commitment to reliability and customer satisfaction, our insurance offerings ensure that you can drive with confidence, knowing that you're well-protected. Experience worry-free travels and secure your investment with our trusted Insurance services, offering the coverage you need for a smooth and confident ride",
+    img: insurance,
   },
 
   {
     id: "services_6",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Fuel...6",
-    title: "Money is only a tool. It will take you wherever you wish, .",
-    img: tanker,
+    name: "Emergency Fuel Service",
+    title:
+      "Experience peace of mind on the road with our Emergency Fuel Service. Life's unexpected twists should never leave you stranded. Our dedicated team is just a call away, ready to deliver the fuel you need to keep your journey going. Whether you've run out of gas on a remote highway or need a quick refuel in the midst of your daily commute, our prompt and reliable Emergency Fuel Service ensures you're back on the road swiftly. Count on us to provide the fuel you need, wherever you are, whenever you need it, making unexpected fuel shortages a thing of the past. Drive confidently, knowing that our Emergency Fuel Service has you covered, ensuring you reach your destination without a hitch.",
+    img: emragence,
   },
 
   {
     id: "services_7",
     content:
       "It is usually people in the money business, finance, and eally rich.",
-    name: "Fuel ...5",
+    name: "Marke Places",
     title:
-      "Money is only a tool. It will take you wherever you wish, but it will not",
-    img: oil,
+      "Explore a comprehensive automotive experience within our Marketplace, where a world of possibilities awaits. Discover the perfect vehicle tailored to your needs, whether it's through purchasing, renting, or engaging in a seamless car exchange. Our Marketplace is a dynamic hub that brings together car enthusiasts and seekers, offering a diverse range of options for buying, renting, and even trading vehicles. Immerse yourself in the convenience of finding your dream car, be it for ownership or a temporary journey, all in one centralized automotive destination. Uncover a marketplace that transcends the traditional, delivering a versatile and user-friendly platform for all your automotive aspirations.",
+    img: place,
   },
 ];
 

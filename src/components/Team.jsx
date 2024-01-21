@@ -28,7 +28,7 @@ const Team = () => {
               <CardHeader>
                 <CardTitle className="text-white">Our Goal </CardTitle>
               </CardHeader>
-              <CardContent className="text-white font-sans">
+              <CardContent className="text-white text-center font-sans">
                 <p className="font-bold text-gradient text-lg leading-6">
                   Customer Satisfaction:
                 </p>
@@ -91,7 +91,7 @@ const Team = () => {
                   Mision
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-white font-sans">
+              <CardContent className="text-white text-center font-sans">
                 <p>
                   Our mission is to redefine the driving experience by
                   establishing a comprehensive one-stop-shop for all automotive
@@ -118,7 +118,7 @@ const Team = () => {
               <CardHeader>
                 <CardTitle className="text-white">Vision!</CardTitle>
               </CardHeader>
-              <CardContent className="text-white ">
+              <CardContent className="text-white text-center ">
                 <p>
                   To emerge as the premier provider of comprehensive and
                   innovative car services, we aspire to revolutionize the

@@ -32,15 +32,32 @@ import bl from "./bl.png";
 import wheel from "./wheel.png";
 import insurance from "./insurance.png";
 import tanker from "./tanker.png";
-import oil from "./oil.png";
+
 import car from "./car.png";
 import fuel2 from "./fuel2.png";
 import fuel3 from "./fuel3.jpg";
 import call from "./call.png";
 import tyre1 from "./tyre1.jpg";
 import tyre2 from "./tyre2.jpg";
-
+import R from "./R.jpg";
+import r2 from "./r2.jpg";
+import r3 from "./r3.jpg";
+import carwash1 from "./carwash1.jpg";
+import carwa from "./carwa.jpg";
+import oil from "./oil.png";
+import oil2 from "./oil2.jpg";
+import emragence from "./emragence.png";
+import place from "./place.jpg";
 export {
+  place,
+  emragence,
+  oil2,
+  oil,
+  carwa,
+  r3,
+  carwash1,
+  R,
+  r2,
   tyre2,
   tyre1,
   call,
@@ -48,7 +65,6 @@ export {
   fuel2,
   insurance,
   tanker,
-  oil,
   car,
   wheel,
   batter,

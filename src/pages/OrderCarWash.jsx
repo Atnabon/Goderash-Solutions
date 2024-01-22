@@ -28,7 +28,7 @@ const OrderCarWash = () => {
     const fetchCarTypes = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+          "https://api.gooderash.com/api/base/admin/listvehicleinformation/"
         );
         setCarTypes(response.data);
       } catch (error) {
@@ -42,7 +42,7 @@ const OrderCarWash = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+          "https://api.gooderash.com/api/base/admin/listcategory/"
         );
         setCategories(response.data);
       } catch (error) {
@@ -58,7 +58,7 @@ const OrderCarWash = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/base/user/carwashorder/",
+        "https://api.gooderash.com/api/base/user/carwashorder/",
         formData
       );
       console.log("Car wash order placed successfully!");

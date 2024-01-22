@@ -4,7 +4,7 @@ import styles from "../style";
 import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
-  // const { loginUser } = useContext(AuthContext);
+  const { loginUser } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();

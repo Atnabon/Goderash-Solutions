@@ -26,7 +26,7 @@ const BatteryOrderForm = () => {
     const fetchCarTypes = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+          "https://api.gooderash.com/api/base/admin/listvehicleinformation/"
         );
         setCarTypes(response.data);
       } catch (error) {
@@ -40,7 +40,7 @@ const BatteryOrderForm = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+          "https://api.gooderash.com/api/base/admin/listcategory/"
         );
         setCategories(response.data);
       } catch (error) {
@@ -56,7 +56,7 @@ const BatteryOrderForm = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/base/user/batteryorder/",
+        "https://api.gooderash.com/api/base/user/batteryorder/",
         formData
       );
       console.log("Battery order placed successfully!");

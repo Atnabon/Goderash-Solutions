@@ -8,7 +8,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginUser();
+    loginUser(e);
   };
 
   return (

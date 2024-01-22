@@ -1,12 +1,5 @@
 import styles from "../style";
-import {
-  FuelDelivery,
-  imagefuely,
-  tya1,
-  tyre1,
-  carwash3,
-  carwash4,
-} from "../assets";
+import { carwash4 } from "../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 

@@ -64,8 +64,27 @@ import park1 from "./Park1.jpg";
 import park2 from "./park2.jpg";
 import park3 from "./park3.jpg";
 import engineoil from "./enginoil.jpg";
+import iconoil1tm from "./iconoil1tm.svg";
+import iconoil2000tm from "./iconoil2000tm.svg";
+import iconoil3000tm from "./iconoil3000tm.svg";
+import iconoil7000 from "./iconoil7000.svg";
+import iconoil9000 from "./iconoil9000.svg";
+import iconoil9000e from "./iconoil9000e.svg";
+import icontrip from "./icontrip.svg";
+import engineoil1 from "./engineoil1.jpg";
+import engineoil2 from "./engineoil2.jpg";
+
 export {
+  engineoil1,
+  engineoil2,
+  iconoil1tm,
+  iconoil2000tm,
+  iconoil3000tm,
+  iconoil7000,
+  iconoil9000,
   engineoil,
+  iconoil9000e,
+  icontrip,
   park1,
   park2,
   park3,

@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import EngineOil1 from "./EngineOil1";
 import EngineOil2 from "./EngineOil2";
 import EngineOil3 from "./EngineOil3";
+import EngineOil4 from "./EngineOil4";
+import EngineOil5 from "./EngineOil5";
+import EngineOil6 from "./EngineOil6";
+import EngineOil7 from "./EngineOil7";
 
 const EngineOil = () => {
   return (
@@ -51,6 +55,11 @@ const EngineOil = () => {
       <EngineOil1 />
       <EngineOil2 />
       <EngineOil3 />
+      <EngineOil4 />
+      <EngineOil5 />
+      <EngineOil7 />
+      <EngineOil6 />
+
       <div className="mt-24">
         {" "}
         <Footer />

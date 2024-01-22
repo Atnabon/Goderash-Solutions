@@ -63,7 +63,9 @@ import icon4 from "./icon4.svg";
 import park1 from "./Park1.jpg";
 import park2 from "./park2.jpg";
 import park3 from "./park3.jpg";
+import engineoil from "./enginoil.jpg";
 export {
+  engineoil,
   park1,
   park2,
   park3,

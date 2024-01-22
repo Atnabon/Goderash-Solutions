@@ -1,8 +1,9 @@
 import b from "../assets/b.png";
 import styles from "../style";
 import { show, rote } from "../assets";
-import Fuel1 from "./Fuel1";
 import Footer from "@/components/Footer";
+import EngineOil1 from "./EngineOil1";
+import EngineOil2 from "./EngineOil2";
 
 const EngineOil = () => {
   return (
@@ -46,7 +47,8 @@ const EngineOil = () => {
           </main>
         </div>
       </div>
-      <Fuel1 />
+      <EngineOil1 />
+      <EngineOil2 />
       <div className="mt-24">
         {" "}
         <Footer />

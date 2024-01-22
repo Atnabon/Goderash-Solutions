@@ -41,5 +41,4 @@ const Battery6 = () => {
     </div>
   );
 };
-
 export default Battery6;

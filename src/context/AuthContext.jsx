@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
   let loginUser = async (e) => {
     e.preventDefault();
-    let response = await fetch("http://127.0.0.1:8000/api/account/token/", {
+    let response = await fetch("http://api.gooderash.com/api/account/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
 
   let updateToken = async () => {
     let response = await fetch(
-      "http://127.0.0.1:8000/api/account/token/refresh/",
+      "http://api.gooderash.com/api/account/token/refresh/",
       {
         method: "POST",
         headers: {

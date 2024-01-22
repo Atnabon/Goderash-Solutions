@@ -19,7 +19,7 @@ const AddCar = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/base/user/createvehicleinformation/",
+        "http://api.gooderash.com/api/base/user/createvehicleinformation/",
         newVehicle
       );
       setNewVehicle({

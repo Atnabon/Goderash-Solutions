@@ -4,6 +4,7 @@ import { show, rote } from "../assets";
 import Footer from "@/components/Footer";
 import EngineOil1 from "./EngineOil1";
 import EngineOil2 from "./EngineOil2";
+import EngineOil3 from "./EngineOil3";
 
 const EngineOil = () => {
   return (
@@ -49,6 +50,7 @@ const EngineOil = () => {
       </div>
       <EngineOil1 />
       <EngineOil2 />
+      <EngineOil3 />
       <div className="mt-24">
         {" "}
         <Footer />

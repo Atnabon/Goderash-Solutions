@@ -55,7 +55,23 @@ import carwash4 from "./carwash4.jpg";
 import carwash5 from "./carwash5.jpg";
 import carwash6 from "./carwash6.jpg";
 import carwash7 from "./carwash7.webp";
+import battery1 from "./battery1.jpg";
+import icon1 from "./icon1.svg";
+import icon2 from "./icon2.svg";
+import icon3 from "./icon3.svg";
+import icon4 from "./icon4.svg";
+import park1 from "./Park1.jpg";
+import park2 from "./park2.jpg";
+import park3 from "./park3.jpg";
 export {
+  park1,
+  park2,
+  park3,
+  icon1,
+  icon2,
+  icon3,
+  icon4,
+  battery1,
   tya,
   carwash7,
   carwash6,

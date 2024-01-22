@@ -4,6 +4,12 @@ import styles from "../style";
 import { show, rote } from "../assets";
 import Fuel1 from "./Fuel1";
 import Footer from "@/components/Footer";
+import Battery1 from "./Battery1";
+import Battery2 from "./Battery2";
+import Battery3 from "./Battery3";
+import Battery4 from "./Battery4";
+import Battery5 from "./Battery5";
+import Battery6 from "./Battery6";
 
 const Battery = () => {
   return (
@@ -47,7 +53,12 @@ const Battery = () => {
           </main>
         </div>
       </div>
-      <Fuel1 />
+      <Battery1 />
+      <Battery2 />
+      <Battery3 />
+      <Battery4 />
+      <Battery5 />
+      <Battery6 />
       <div className="mt-24">
         {" "}
         <Footer />

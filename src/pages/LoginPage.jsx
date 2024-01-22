@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import AuthContext from "../context/AuthContext";
+// import AuthContext from "../context/AuthContext";
 import styles from "../style";
 import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
-  const { loginUser } = useContext(AuthContext);
+  // const { loginUser } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();

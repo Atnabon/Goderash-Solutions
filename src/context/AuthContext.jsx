@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
 
   let updateToken = async () => {
     let response = await fetch(
-      "https://api.gooderash.com/account/token/refresh/",
+      "https://api.gooderash.com/api/account/token/refresh/",
       {
         method: "POST",
         headers: {
